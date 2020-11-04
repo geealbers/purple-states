@@ -9,6 +9,12 @@ h1 {
   margin: 6vh auto 2vh;
 }
 
+svg#reload {
+  height: 4vh;
+  width: 4vh;
+  fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
+
 a {
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
