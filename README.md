@@ -2,6 +2,10 @@
 
 https://geealbers.github.io/purple-states/
 
+*Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. States are not strictly red and blue, they are shades of purple.*
+
+---
+
 In the United States, no state ever votes 100% Democratic (blue) or 100% Replublican (red), and yet this is how we are most accustomed to seeing our electoral maps illustrated. Such as this one from 2004:
 
 ![2004 electoral map with the West Coast, New England and Rust Belt states in blue, all other states in red](img/2004-traditional.jpg)
