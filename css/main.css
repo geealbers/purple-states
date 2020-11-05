@@ -47,26 +47,21 @@ a {
 svg#map {
   margin: 0 auto;
   max-height: 76vh;
-  width: max-content;
-}
-
-.reload-link {
-  position: relative;
+  width: -moz-max-content;
 }
 
 svg#reload,
 svg#info {
-  height: 4vh;
-  width: 4vh;
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
 svg#reload {
   height: 2.8vh;
   width: 2.8vh;
-  position: absolute;
-  top: 0;
+  margin-bottom: -.5vh;
 }
 svg#info {
+  height: 4vh;
+  width: 4vh;
   position: fixed;
   bottom: 10px;
   right: 10px;
