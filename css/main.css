@@ -36,7 +36,15 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 420px) {
   ul[role=navigation] {
-    margin: 12vh auto 2vh;
+    margin-bottom: 2vh;
+  }
+  h1 {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (max-width: 780px) {
+  ul[role=navigation] {
+    margin: 12vh auto 4vh;
   }
   h1 {
     left: 0;
@@ -86,7 +94,7 @@ svg#info {
   font-size: 1rem;
   max-height: 24vh;
   overflow: scroll;
-  margin-right: 1rem;
+  margin-right: 1.75rem;
 }
 .map-info--underlay {
   background-color: #e5e5e5;
