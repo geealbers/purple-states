@@ -20,7 +20,7 @@ h1 {
   z-index: -1;
 }
 
-ul {
+ul[role=navigation] {
   display: table;
   text-align: center;
   margin: 6vh auto 4vh;
@@ -29,12 +29,12 @@ ul {
   line-height: 1.3;
   font-weight: 700;
 }
-ul li {
+ul[role=navigation] li {
   margin: 0 .5rem;
   display: inline-block;
 }
 @media screen and (max-width: 420px) {
-  ul {
+  ul[role=navigation] {
     margin: 12vh auto 8vh;
   }
 }
@@ -46,7 +46,7 @@ a {
 
 svg#map {
   margin: 0 auto;
-  max-height: 80vh;
+  max-height: 76vh;
   width: max-content;
 }
 
@@ -78,4 +78,42 @@ svg#info {
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
+
+.map-key {
+  list-style-type: none;
+  display: table;
+  font-size: 2.2vh;
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  margin: 0;
+  padding: 0;
+}
+.map-key li {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: .6vh;
+}
+.map-key div {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 1.5vh;
+  display: inline-block;
+  margin-bottom: -.7vh;
+}
+#dem-75 {
+  background-color: rgb(calc(255 * 0.25), var(--green), calc(255 * 0.75));
+}
+#dem-65 {
+  background-color: rgb(calc(255 * 0.35), var(--green), calc(255 * 0.65));
+}
+#split {
+  background-color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
+#rep-65 {
+  background-color: rgb(calc(255 * 0.65), var(--green), calc(255 * 0.35));
+}
+#rep-75 {
+  background-color: rgb(calc(255 * 0.75), var(--green), calc(255 * 0.25));
 }
