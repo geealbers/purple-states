@@ -9,20 +9,26 @@ h1 {
   margin: 6vh auto 2vh;
 }
 
-svg#reload {
-  height: 4vh;
-  width: 4vh;
-  fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
-}
-
 a {
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
 
-svg {
+svg#map {
   margin: 0 auto;
   height: 80vh;
   width: max-content;
+}
+
+svg#reload,
+svg#info {
+  height: 4vh;
+  width: 4vh;
+  fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
+svg#info {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 .state {
