@@ -53,14 +53,8 @@ svg#map {
   width: -moz-max-content;
 }
 
-svg#reload,
 svg#info {
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
-}
-svg#reload {
-  height: 2.8vh;
-  width: 2.8vh;
-  margin-bottom: -.5vh;
 }
 svg#info {
   height: 4vh;
