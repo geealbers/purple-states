@@ -1,12 +1,20 @@
 # Purple States
 
-In the United States, no state ever votes 100% Democratic (blue) or 100% Replublican (red), and yet this is how we are most accustomed to seeing our electoral maps illustrated.
+https://geealbers.github.io/purple-states/
 
-Authors of a 2009 study proposed an alternate version of the map using proportional shades of purple. States that voted more Democratic were bluer shades of purple, and states that voted more Republican were redder shades of purple, all depending on the percentages of the total vote. Not only did this more accurately reflect the full, nuanced spectrum of the country’s political standings, but it was shown that it decreased study participants’ perceptions of political polarization. They demonstrated that the flipside was also true. Looking at those strict red and blue maps makes us believe that the country is more polarized than it actually is.
+In the United States, no state ever votes 100% Democratic (blue) or 100% Replublican (red), and yet this is how we are most accustomed to seeing our electoral maps illustrated. Such as this one from 2004:
 
-On this site, I've collected state-by-state data from the last fourty years of U.S. presidential elections and proportionally colored the electoral map in shades of purple.
+![2004 electoral map with the West Coast, New England and Rust Belt states in blue, all other states in red](img/2004-traditional.jpg)
 
-While I don’t believe that all views are equal and that those on the far right who have been weilding brutal, and destructive power in recent years are reasonable or can be reasoned with, following the trauma of the 2016 and 2020 elections, I wanted to remember that they are a minority. At the end of the day, most of us are much closer in our beliefs than I think we have come to be shown in the last few decades.
+Authors of [a 2009 study](https://doi.org/10.1111/j.1530-2415.2009.01183.x) proposed an alternate version of the standard electoral map using proportional shades of purple. States that voted more Democratic were bluer shades of purple, and states that voted more Republican were redder shades of purple, all depending on the percentages of the total vote. Here’s 2004 again:
+
+![2004 electoral map with states colored various shades of purple](img/2004-proportional.jpg)
+
+Not only did this more accurately reflect the full, nuanced spectrum of the country’s political standings (as opposed to the winner-take-all system of the broken electoral college) but it was shown that it decreased study participants’ perceptions of political polarization. The researchers demonstrated that the flipside was also true. Looking at those strict red and blue maps makes us believe that the country is more polarized than it actually is.
+
+[On this site](https://geealbers.github.io/purple-states/), I've collected [state-by-state data](https://docs.google.com/spreadsheets/d/1srbBVuDko3WbCrl9WTTkYJUX5OUKACsDY4t1S95inVk/edit?usp=sharing) from the last forty years of U.S. presidential elections and proportionally colored the electoral map in shades of purple.
+
+I built this the day after [the 2020 election](https://en.wikipedia.org/wiki/2020_United_States_presidential_election), before the final winner was announced. After four years of national trauma under the 45th president, it was baffling and sickening that the contest was as close as it was. Still, I was compelled to look for sollace, answers, hope anywhere. The purple map helped me. Helped me to remember that just because a state is “red” doesn’t mean it’s fully that way. To remember that flipping another one may not be that far off after all. To remember that we need to fight the polarization that electoral maps, traditional and social media, and so many other things seems to push us toward these days.
 
 ## Credits
 
