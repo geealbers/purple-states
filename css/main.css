@@ -7,6 +7,7 @@ body {
   padding: 0;
   background-color: #e5e5e5;
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+  line-height: 1.3;
 }
 
 h1 {
@@ -25,7 +26,7 @@ ul[role=navigation] {
   text-align: center;
   margin: 6vh auto 4vh;
   padding: 0 1rem;
-  font-size: 3vh;
+  font-size: 1.5rem;
   line-height: 1.3;
   font-weight: 700;
 }
@@ -35,7 +36,12 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 420px) {
   ul[role=navigation] {
-    margin: 12vh auto 8vh;
+    margin: 12vh auto 2vh;
+  }
+  h1 {
+    left: 0;
+    right: 0;
+    text-align: center;
   }
 }
 
@@ -72,13 +78,31 @@ svg#info {
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
 
+.map-info {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  max-width: 800px;
+  font-size: 1rem;
+}
+.map-info--underlay {
+  background-color: #e5e5e5;
+  opacity: 0.8;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.map-description {
+  margin-bottom: .5rem;
+}
+.map-description a {
+  border-bottom: 1px solid rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
 .map-key {
   list-style-type: none;
   display: table;
-  font-size: 2.2vh;
-  position: fixed;
-  bottom: 5px;
-  left: 10px;
+  font-size: 1rem;
   margin: 0;
   padding: 0;
 }
