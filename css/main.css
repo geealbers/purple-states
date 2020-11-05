@@ -80,10 +80,14 @@ svg#info {
 
 .map-info {
   position: fixed;
-  bottom: 1rem;
+  bottom: 0;
   left: 1rem;
   max-width: 800px;
   font-size: 1rem;
+  max-height: 24vh;
+  overflow: scroll;
+  margin: ;
+  margin-right: 1rem;
 }
 .map-info--underlay {
   background-color: #e5e5e5;
@@ -92,9 +96,6 @@ svg#info {
   width: 100%;
   position: absolute;
   z-index: -1;
-}
-.map-description {
-  margin-bottom: .5rem;
 }
 .map-description a {
   border-bottom: 1px solid rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
