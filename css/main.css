@@ -33,6 +33,11 @@ ul li {
   margin: 0 .5rem;
   display: inline-block;
 }
+@media screen and (max-width: 420px) {
+  ul {
+    margin: 12vh auto 8vh;
+  }
+}
 
 a {
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
@@ -66,7 +71,6 @@ svg#info {
   bottom: 10px;
   right: 10px;
 }
-
 
 .state {
   stroke: white;
