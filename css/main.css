@@ -43,6 +43,9 @@ a {
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
   text-decoration: none;
 }
+a#current-year {
+  border-bottom: 2px solid rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
+}
 
 svg#map {
   margin: 0 auto;

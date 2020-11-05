@@ -11,3 +11,13 @@ function changeCSS(cssFile, cssLinkIndex) {
     document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink)
 
 }
+
+// Add an id to the link of the year currently displayed in order to add styling
+function tagYear(el) {
+
+  var currentYear = document.getElementById("current-year");
+
+  currentYear.removeAttribute("id");
+  el.setAttribute("id", "current-year");
+
+}
