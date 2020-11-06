@@ -10,21 +10,10 @@ body {
   line-height: 1.3;
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 20px;
-  left: 30px;
-  color: #fff;
-  font-style: italic;
-  z-index: -1;
-}
-
 ul[role=navigation] {
   display: table;
   text-align: center;
-  margin: 6vh auto 4vh;
+  margin: 4vh auto;
   padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -33,24 +22,6 @@ ul[role=navigation] {
 ul[role=navigation] li {
   margin: 0 .5rem;
   display: inline-block;
-}
-@media screen and (max-width: 420px) {
-  ul[role=navigation] {
-    margin-bottom: 2vh;
-  }
-  h1 {
-    font-size: 1.25rem;
-  }
-}
-@media screen and (max-width: 780px) {
-  ul[role=navigation] {
-    margin: 12vh auto 4vh;
-  }
-  h1 {
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
 }
 
 a {
@@ -63,7 +34,7 @@ a#current-year {
 
 svg#map {
   margin: 0 auto;
-  max-height: 76vh;
+  max-height: 70vh;
   width: -moz-max-content;
 }
 
@@ -86,6 +57,9 @@ svg#info {
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
 
+.map-info * {
+  margin: 0 0 1rem;
+}
 .map-info {
   position: fixed;
   bottom: 0;
@@ -104,6 +78,10 @@ svg#info {
   position: absolute;
   z-index: -1;
 }
+.map-title {
+  font-size: 1rem;
+  font-style: italic;
+}
 .map-description a {
   border-bottom: 1px solid rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
@@ -111,7 +89,6 @@ svg#info {
   list-style-type: none;
   display: table;
   font-size: 1rem;
-  margin: 0;
   padding: 0;
 }
 .map-key li {

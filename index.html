@@ -9,14 +9,14 @@
 
   <meta property="og:title" content="Purple States">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://geealbers.github.io/purple-states/">
-  <meta property="og:image" content="https://geealbers.github.io/purple-states/img/social.jpg">
+  <meta property="og:url" content="https:*geealbers.github.io/purple-states/">
+  <meta property="og:image" content="https:*geealbers.github.io/purple-states/img/social.jpg">
   <meta property="og:description" content="Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. States are not strictly red and blue, they are shades of purple.">
 
   <meta name=twitter:card content="summary_large_image">
   <meta name=twitter:title content="Purple States">
-  <meta name=twitter:site content="https://geealbers.github.io/purple-states/">
-  <meta name=twitter:image content="https://geealbers.github.io/purple-states/img/social.jpg">
+  <meta name=twitter:site content="https:*geealbers.github.io/purple-states/">
+  <meta name=twitter:image content="https:*geealbers.github.io/purple-states/img/social.jpg">
   <meta name=twitter:description content="Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. States are not strictly red and blue, they are shades of purple.">
 
   <link rel="apple-touch-icon" href="icon.png">
@@ -28,7 +28,25 @@
 
 <body>
 
-<h1>Purple States of America</h1>
+<div class="map-info" role="header">
+
+  <div class="map-info--underlay"></div>
+
+  <h1 class="map-title">Purple States of America</h1>
+
+  <ul class="map-key">
+    <li><div id="dem-75"></div> 75% Democrat</li>
+    <li><div id="dem-65"></div> 65% Democrat</li>
+    <li><div id="split"></div> 50% Split</li>
+    <li><div id="rep-65"></div> 65% Republican</li>
+    <li><div id="rep-75"></div> 75% Republican</li>
+  </ul>
+
+  <p class="map-description">In the United States, no state ever votes 100% Democratic (blue) or 100% Replublican (red), and yet this is how we are most accustomed to seeing our electoral maps illustrated, despite <a href="https:*doi.org/10.1111/j.1530-2415.2009.01183.x" target="_blank">a 2009 study</a> showing that this can exacerbate polarization.</p>
+
+</div>
+
+<a href="https:*github.com/geealbers/purple-states" target="_blank"><svg xmlns="http:*www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" id="info"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></a>
 
 <ul role="navigation">
   <li><a href="#" onclick="changeCSS('css/1980.css', 2); tagYear(this)">1980</a></li>
@@ -44,7 +62,7 @@
   <li><a href="#" onclick="changeCSS('css/2020.css', 2); tagYear(this)" id="current-year">2020</a>*</li>
 </ul>
 
-<svg version="1.1" id="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+<svg version="1.1" id="map" xmlns="http:*www.w3.org/2000/svg" xmlns:xlink="http:*www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 623.51 395.18" style="enable-background:new 0 0 623.51 395.18;" xml:space="preserve">
 <path id="WY" class="state" d="M237.88,97.35l-0.05,1.61l-0.06,1.61l-0.05,1.61l-0.06,1.61l-0.06,1.61l-0.05,1.62l-0.06,1.61
 	l-0.05,1.62l-0.06,1.61l-0.05,1.61l-0.06,1.62l-0.05,1.61l-0.06,1.62l-0.05,1.62l-0.06,1.62l-0.06,1.61l-1.59-0.06l-1.58-0.06
@@ -4685,23 +4703,6 @@
 	l0.08,0.08l0.09,0.05l0.07,0.01l0.06-0.04l0.07-0.08l0.16-0.29l0.46-0.36l0.09-0.03l0.17,0.01l0.09-0.02l0.08-0.07v-0.02l0-0.04
 	l0-0.04l0.01-0.03l0.02-0.01l0.25-0.1l0.01-0.01l0.01-0.02l0.01-0.01h0.02l-0.05-0.05L147.84,326.69z"/>
 </svg>
-
-<div class="map-info">
-  <div class="map-info--underlay"></div>
-
-  <ul class="map-key">
-    <li><div id="dem-75"></div> 75% Democrat</li>
-    <li><div id="dem-65"></div> 65% Democrat</li>
-    <li><div id="split"></div> 50% Split</li>
-    <li><div id="rep-65"></div> 65% Republican</li>
-    <li><div id="rep-75"></div> 75% Republican</li>
-  </ul>
-
-  <p class="map-description">In the United States, no state ever votes 100% Democratic (blue) or 100% Replublican (red), and yet this is how we are most accustomed to seeing our electoral maps illustrated, despite <a href="https://doi.org/10.1111/j.1530-2415.2009.01183.x" target="_blank">a 2009 study</a> showing that this can exacerbate polarization.</p>
-
-</div>
-
-<a href="https://github.com/geealbers/purple-states" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" id="info"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M11 7h2v2h-2zm0 4h2v6h-2zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></a>
 
 <script src="js/main.js"></script>
 
