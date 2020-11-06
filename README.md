@@ -1,6 +1,6 @@
-# Purple States
+# Purple States of America 💜🇺🇸
 
-https://geealbers.github.io/purple-states/
+https://purplestatesofamerica.org/
 
 *Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. States are not strictly red and blue, they are shades of purple.*
 
@@ -16,9 +16,9 @@ Authors of [a 2009 study](https://doi.org/10.1111/j.1530-2415.2009.01183.x) prop
 
 Not only did this more accurately reflect the full, nuanced spectrum of the country’s political standings (as opposed to the winner-take-all system of the broken electoral college) but it was shown that it decreased study participants’ perceptions of political polarization. The researchers demonstrated that the flipside was also true. Looking at those strict red and blue maps makes us believe that the country is more polarized than it actually is.
 
-[On this site](https://geealbers.github.io/purple-states/), I've collected [state-by-state data](https://docs.google.com/spreadsheets/d/1srbBVuDko3WbCrl9WTTkYJUX5OUKACsDY4t1S95inVk/edit?usp=sharing) from the last forty years of U.S. presidential elections and proportionally colored the electoral map in shades of purple.
+On [*Purple States of America*](https://purplestatesofamerica.org/), I've collected [state-by-state data](https://docs.google.com/spreadsheets/d/1srbBVuDko3WbCrl9WTTkYJUX5OUKACsDY4t1S95inVk/edit?usp=sharing) from the last forty years of U.S. presidential elections and proportionally colored the electoral map in shades of purple.
 
-I built this the day after [the 2020 election](https://en.wikipedia.org/wiki/2020_United_States_presidential_election), before the final winner was announced. After four years of national trauma under the 45th president, it was baffling and sickening that the contest was as close as it was. Still, I was compelled to look for sollace, answers, hope anywhere. The purple map helped me. Helped me to remember that just because a state is “red” doesn’t mean it’s fully that way. To remember that flipping another one may not be that far off after all. To remember that we need to fight the polarization that electoral maps, traditional and social media, and so many other things seems to push us toward these days.
+I built this in the days following [the 2020 election](https://en.wikipedia.org/wiki/2020_United_States_presidential_election), before the final winner was announced. After four years of national trauma under the 45th president, it was baffling and sickening that the contest was as close as it was. Still, I was compelled to look for sollace, answers, hope anywhere. The purple map helped me. Helped me to remember that just because a state is “red” doesn’t mean it’s fully that way. To remember that flipping another one may not be that far off after all. To remember that we need to fight the polarization that electoral maps, traditional and social media, and so many other things seems to push us toward these days.
 
 ## Credits
 
@@ -34,6 +34,6 @@ Redaction font (Open Font License 1.1): https://www.redaction.us/.
 
 ## License
 
-© Greg Albers, 2020
+© [Greg Albers](https://geealbers.net/), 2020
 
 This site is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](https://creativecommons.org/licenses/by-nc/4.0/). Please feel free to share, re-mix, and re-use it with attribution for non-commerical purposes.
