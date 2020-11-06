@@ -2,7 +2,7 @@
 
 https://purplestatesofamerica.org/
 
-*Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. States are not strictly red and blue, they are shades of purple.*
+*Traditional U.S. electoral maps not only illustrate polarization, they can exacerbate it. No state is strictly red or blue, they are all shades of purple.*
 
 ---
 
