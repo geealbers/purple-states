@@ -2,10 +2,37 @@
   --green: 60;
 }
 
+/* Redaction
+https://www.redaction.us/
+Open Font License 1.1 (https://scripts.sil.org/OFL) */
+
+/* Redaction Regular */
+@font-face {
+  font-family: "Redaction";
+  src: url("../fonts/Redaction-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Redaction Italic */
+@font-face {
+  font-family: "Redaction";
+  src: url("../fonts/Redaction-Italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+/* Redaction Bold */
+@font-face {
+  font-family: "Redaction";
+  src: url("../fonts/Redaction-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   padding: 0;
   background-color: #e5e5e5;
+  font-family: "Redaction", serif;
   color: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
   line-height: 1.3;
 }
@@ -17,11 +44,17 @@ ul[role=navigation] {
   padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 1.3;
-  font-weight: 700;
+  font-weight: 400;
 }
 ul[role=navigation] li {
   margin: 0 .5rem;
   display: inline-block;
+}
+@media screen and (max-width: 480px) {
+  ul[role=navigation] {
+    font-size: 1.35rem;
+    line-height: 1.6;
+  }
 }
 
 a {
@@ -42,11 +75,11 @@ svg#info {
   fill: rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));
 }
 svg#info {
-  height: 4vh;
-  width: 4vh;
+  height: 3.5vh;
+  width: 3.5vh;
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 1rem;
+  right: .85rem;
 }
 
 .state {
@@ -64,7 +97,7 @@ svg#info {
   position: fixed;
   bottom: 0;
   left: 1rem;
-  max-width: 800px;
+  max-width: 880px;
   font-size: 1rem;
   max-height: 24vh;
   overflow: scroll;
@@ -79,8 +112,7 @@ svg#info {
   z-index: -1;
 }
 .map-title {
-  font-size: 1rem;
-  font-style: italic;
+  font-size: 1.25rem;
 }
 .map-description a {
   border-bottom: 1px solid rgb(calc(255 * 0.50), var(--green), calc(255 * 0.50));

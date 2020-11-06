@@ -30,7 +30,7 @@ Map data was pulled from Wikipedia pages and culled in a Google Sheet: https://d
 
 Vector map of the United States: https://freevectormaps.com/united-states/US-EPS-01-0002.
 
-Reload and Information icons: https://material.io/resources/icons/?search=replay&style=baseline
+Redaction font (Open Font License 1.1): https://www.redaction.us/.
 
 ## License
 
