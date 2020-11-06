@@ -34,7 +34,7 @@ a#current-year {
 
 svg#map {
   margin: 0 auto;
-  max-height: 70vh;
+  max-height: 68vh;
   width: -moz-max-content;
 }
 
@@ -72,7 +72,7 @@ svg#info {
 }
 .map-info--underlay {
   background-color: #e5e5e5;
-  opacity: 0.8;
+  opacity: 0.7;
   height: 100%;
   width: 100%;
   position: absolute;
