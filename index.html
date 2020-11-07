@@ -22,7 +22,7 @@
   <link rel="apple-touch-icon" href="icon.png">
 
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/2020-alt.css">
+  <link rel="stylesheet" href="css/2020.css">
 
   <link rel="preload" href="css/1980.css" as="style">
   <link rel="preload" href="css/1988.css" as="style">
@@ -45,16 +45,22 @@
   <h1 class="map-title">Purple States of America</h1>
 
   <ul class="map-key">
-    <li><div id="dem-75"></div> 75% Democrat</li>
-    <li><div id="dem-65"></div> 65% Democrat</li>
-    <li><div id="split"></div> 50% Split</li>
-    <li><div id="rep-65"></div> 65% Republican</li>
-    <li><div id="rep-75"></div> 75% Republican</li>
+    <li><div id="dem-75" class="key-item"></div> 75% Democrat</li>
+    <li><div id="dem-65" class="key-item"></div> 65% Democrat</li>
+    <li><div id="split" class="key-item"></div> 50% Split</li>
+    <li><div id="rep-65" class="key-item"></div> 65% Republican</li>
+    <li><div id="rep-75" class="key-item"></div> 75% Republican</li>
   </ul>
 
   <p class="map-description">In the United States, no state ever votes 100% Democratic (blue) or 100% Republican (red), and yet this is how we are accustomed to seeing our electoral maps illustrated, despite a 2009 study showing that this can exacerbate polarization. <a href="https://github.com/geealbers/purple-states" target="_blank"><em>Read more ...</em></a></p>
 
 </div>
+
+<form id="color-select">
+  <input type="radio" name="color" id="purple" onchange="changeColor(this)"> Purple</input>
+  <input type="radio" name="color" id="blue-yellow" onchange="changeColor(this)"> Blue-Yellow</input>
+  <input type="radio" name="color" id="grayscale" onchange="changeColor(this)"> Grayscale</input>
+</form>
 
 <a href="https://github.com/geealbers/purple-states" target="_blank">
   <svg id="info" viewBox="0 0 24 24"> <path class="st0" d="M10.87,13.31c0-0.55,0.37-1.16,1.08-1.93l0.84-0.92c0.72-0.79,0.99-1.38,0.99-2.15c0-1.23-0.86-2.02-2.15-2.02 c-1.12,0-1.94,0.66-2.03,1.78h0.48c0.27,1.1-0.26,1.83-1.21,1.83c-0.71,0-1.21-0.62-1.21-1.41c0-1.54,1.61-3.01,4.31-3.01 c2.9,0,4.36,1.49,4.36,3.17c0,0.99-0.53,2.09-2.05,3.01l-1.41,0.84c-0.6,0.37-0.92,0.77-0.92,1.15c0,0.28,0.15,0.62,0.53,0.81 C11.42,14.72,10.87,14.12,10.87,13.31z M13.18,15.79v2.71h-2.75v-2.71H13.18z"/> <path class="st0" d="M12,2c5.51,0,10,4.49,10,10s-4.49,10-10,10S2,17.51,2,12S6.49,2,12,2 M12,0C5.37,0,0,5.37,0,12s5.37,12,12,12 s12-5.37,12-12S18.63,0,12,0L12,0z"/> </svg>
