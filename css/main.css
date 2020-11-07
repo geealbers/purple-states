@@ -131,23 +131,15 @@ svg#info {
   display: inline-block;
   margin-bottom: -.7vh;
 }
-#dem-75 {
-  background-color: rgb(calc(255 * 0.25), 60, calc(255 * 0.75));
-  background-color: rgb(87.75, 94.5, 118);
-}
-#dem-65 {
-  background-color: rgb(calc(255 * 0.35), 60, calc(255 * 0.65));
-  background-color: rgb(101.25, 103.9, 103.2);
-}
-#split {
-  background-color: rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
-  background-color: rgb(121.5, 118, 81);
-}
-#rep-65 {
-  background-color: rgb(calc(255 * 0.65), 60, calc(255 * 0.35));
-  background-color: rgb(141.75, 132.1, 58.8);
-}
-#rep-75 {
-  background-color: rgb(calc(255 * 0.75), 60, calc(255 * 0.25));
-  background-color: rgb(155.25, 141.5, 44);
-}
+
+#dem-75 { background-color: rgb(calc(255 * 0.25), 60, calc(255 * 0.75)); }
+#dem-65 { background-color: rgb(calc(255 * 0.35), 60, calc(255 * 0.65)); }
+#split { background-color: rgb(calc(255 * 0.50), 60, calc(255 * 0.50)); }
+#rep-65 { background-color: rgb(calc(255 * 0.65), 60, calc(255 * 0.35)); }
+#rep-75 { background-color: rgb(calc(255 * 0.75), 60, calc(255 * 0.25)); }
+
+#dem-75.blue-yellow { background-color: rgb(94, 94, 123.5); }
+#dem-65.blue-yellow { background-color: rgb(104.4, 104.4, 110.5); }
+#split.blue-yellow { background-color: rgb(120, 120, 91); }
+#rep-65.blue-yellow { background-color: rgb(135.6, 135.6, 71.5); }
+#rep-75.blue-yellow { background-color: rgb(146, 146, 58.5); }
