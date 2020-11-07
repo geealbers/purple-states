@@ -48,6 +48,7 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 480px) {
   ul[role=navigation] {
+    margin: 3vh auto 2vh;
     font-size: 1.35rem;
     line-height: 1.6;
   }
