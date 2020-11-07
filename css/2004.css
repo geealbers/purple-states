@@ -153,3 +153,56 @@
 #WV.grayscale { fill: rgb(144, 144, 144); }
 #WI.grayscale { fill: rgb(127, 127, 127); }
 #WY.grayscale { fill: rgb(179, 179, 179); }
+
+/* Sample of traditional 100% red and blue map */
+#AL.traditional { fill: rgb(255,0,0); }
+#AK.traditional { fill: rgb(255,0,0); }
+#AZ.traditional { fill: rgb(255,0,0); }
+#AR.traditional { fill: rgb(255,0,0); }
+#CA.traditional { fill: rgb(0,0,255); }
+#CO.traditional { fill: rgb(255,0,0); }
+#CT.traditional { fill: rgb(0,0,255); }
+#DE.traditional { fill: rgb(0,0,255); }
+#DC.traditional { fill: rgb(0,0,255); }
+#FL.traditional { fill: rgb(255,0,0); }
+#GA.traditional { fill: rgb(255,0,0); }
+#HI.traditional { fill: rgb(0,0,255); }
+#ID.traditional { fill: rgb(255,0,0); }
+#IL.traditional { fill: rgb(0,0,255); }
+#IN.traditional { fill: rgb(255,0,0); }
+#IA.traditional { fill: rgb(255,0,0); }
+#KS.traditional { fill: rgb(255,0,0); }
+#KY.traditional { fill: rgb(255,0,0); }
+#LA.traditional { fill: rgb(255,0,0); }
+#ME.traditional { fill: rgb(0,0,255); }
+#MD.traditional { fill: rgb(0,0,255); }
+#MA.traditional { fill: rgb(0,0,255); }
+#MI.traditional { fill: rgb(0,0,255); }
+#MN.traditional { fill: rgb(0,0,255); }
+#MS.traditional { fill: rgb(255,0,0); }
+#MO.traditional { fill: rgb(255,0,0); }
+#MT.traditional { fill: rgb(255,0,0); }
+#NE.traditional { fill: rgb(255,0,0); }
+#NV.traditional { fill: rgb(255,0,0); }
+#NH.traditional { fill: rgb(0,0,255); }
+#NJ.traditional { fill: rgb(0,0,255); }
+#NM.traditional { fill: rgb(255,0,0); }
+#NY.traditional { fill: rgb(0,0,255); }
+#NC.traditional { fill: rgb(255,0,0); }
+#ND.traditional { fill: rgb(255,0,0); }
+#OH.traditional { fill: rgb(255,0,0); }
+#OK.traditional { fill: rgb(255,0,0); }
+#OR.traditional { fill: rgb(0,0,255); }
+#PA.traditional { fill: rgb(0,0,255); }
+#RI.traditional { fill: rgb(0,0,255); }
+#SC.traditional { fill: rgb(255,0,0); }
+#SD.traditional { fill: rgb(255,0,0); }
+#TN.traditional { fill: rgb(255,0,0); }
+#TX.traditional { fill: rgb(255,0,0); }
+#UT.traditional { fill: rgb(255,0,0); }
+#VT.traditional { fill: rgb(0,0,255); }
+#VA.traditional { fill: rgb(255,0,0); }
+#WA.traditional { fill: rgb(0,0,255); }
+#WV.traditional { fill: rgb(255,0,0); }
+#WI.traditional { fill: rgb(0,0,255); }
+#WY.traditional { fill: rgb(255,0,0); }
