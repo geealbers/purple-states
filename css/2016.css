@@ -1,51 +1,155 @@
-#AL { fill: rgb(calc(255 * 0.643741435939607), 60, calc(255 * 0.356258564060393)); }
-#AK { fill: rgb(calc(255 * 0.583856547110681), 60, calc(255 * 0.416143452889319)); }
-#AZ { fill: rgb(calc(255 * 0.518900234010395), 60, calc(255 * 0.481099765989605)); }
-#AR { fill: rgb(calc(255 * 0.642851376897705), 60, calc(255 * 0.357148623102295)); }
-#CA { fill: rgb(calc(255 * 0.338717794572701), 60, calc(255 * 0.661282205427299)); }
-#CO { fill: rgb(calc(255 * 0.473166666273176), 60, calc(255 * 0.526833333726824)); }
-#CT { fill: rgb(calc(255 * 0.428584524827364), 60, calc(255 * 0.571415475172636)); }
-#DE { fill: rgb(calc(255 * 0.440013785563188), 60, calc(255 * 0.559986214436812)); }
-#DC { fill: rgb(calc(255 * 0.0430481165814592), 60, calc(255 * 0.956951883418541)); }
-#FL { fill: rgb(calc(255 * 0.506188354727755), 60, calc(255 * 0.493811645272245)); }
-#GA { fill: rgb(calc(255 * 0.526611725993032), 60, calc(255 * 0.473388274006968)); }
-#HI { fill: rgb(calc(255 * 0.325586625494645), 60, calc(255 * 0.674413374505355)); }
-#ID { fill: rgb(calc(255 * 0.683101766808056), 60, calc(255 * 0.316898233191944)); }
-#IL { fill: rgb(calc(255 * 0.409799486092885), 60, calc(255 * 0.590200513907115)); }
-#IN { fill: rgb(calc(255 * 0.601173095245081), 60, calc(255 * 0.398826904754919)); }
-#IA { fill: rgb(calc(255 * 0.550635478451203), 60, calc(255 * 0.449364521548797)); }
-#KS { fill: rgb(calc(255 * 0.611114703426067), 60, calc(255 * 0.388885296573933)); }
-#KY { fill: rgb(calc(255 * 0.656706290175099), 60, calc(255 * 0.343293709824901)); }
-#LA { fill: rgb(calc(255 * 0.601716772378078), 60, calc(255 * 0.398283227621922)); }
-#ME { fill: rgb(calc(255 * 0.484032088708375), 60, calc(255 * 0.515967911291625)); }
-#MD { fill: rgb(calc(255 * 0.359837503152306), 60, calc(255 * 0.640162496847694)); }
-#MA { fill: rgb(calc(255 * 0.353487213103705), 60, calc(255 * 0.646512786896295)); }
-#MI { fill: rgb(calc(255 * 0.501176682169616), 60, calc(255 * 0.498823317830385)); }
-#MN { fill: rgb(calc(255 * 0.491681430663847), 60, calc(255 * 0.508318569336154)); }
-#MS { fill: rgb(calc(255 * 0.590898473240601), 60, calc(255 * 0.409101526759399)); }
-#MO { fill: rgb(calc(255 * 0.598185609955661), 60, calc(255 * 0.401814390044339)); }
-#MT { fill: rgb(calc(255 * 0.611096643170244), 60, calc(255 * 0.388903356829756)); }
-#NE { fill: rgb(calc(255 * 0.635476741131776), 60, calc(255 * 0.364523258868224)); }
-#NV { fill: rgb(calc(255 * 0.487062905800148), 60, calc(255 * 0.512937094199852)); }
-#NH { fill: rgb(calc(255 * 0.498029715576193), 60, calc(255 * 0.501970284423807)); }
-#NJ { fill: rgb(calc(255 * 0.427158098570987), 60, calc(255 * 0.572841901429013)); }
-#NM { fill: rgb(calc(255 * 0.453492050656759), 60, calc(255 * 0.546507949343241)); }
-#NY { fill: rgb(calc(255 * 0.382275588157694), 60, calc(255 * 0.617724411842306)); }
-#NC { fill: rgb(calc(255 * 0.519037458037187), 60, calc(255 * 0.480962541962813)); }
-#ND { fill: rgb(calc(255 * 0.698092428965197), 60, calc(255 * 0.301907571034803)); }
-#OH { fill: rgb(calc(255 * 0.542676845771359), 60, calc(255 * 0.457323154228641)); }
-#OK { fill: rgb(calc(255 * 0.693047372383281), 60, calc(255 * 0.306952627616719)); }
-#OR { fill: rgb(calc(255 * 0.438441610549456), 60, calc(255 * 0.561558389450544)); }
-#PA { fill: rgb(calc(255 * 0.503755358074902), 60, calc(255 * 0.496244641925098)); }
-#RI { fill: rgb(calc(255 * 0.416892959073402), 60, calc(255 * 0.583107040926598)); }
-#SC { fill: rgb(calc(255 * 0.57460256360524), 60, calc(255 * 0.42539743639476)); }
-#SD { fill: rgb(calc(255 * 0.659718580794313), 60, calc(255 * 0.340281419205688)); }
-#TN { fill: rgb(calc(255 * 0.63624343045262), 60, calc(255 * 0.36375656954738)); }
-#TX { fill: rgb(calc(255 * 0.54713225577972), 60, calc(255 * 0.45286774422028)); }
-#UT { fill: rgb(calc(255 * 0.623836582084908), 60, calc(255 * 0.376163417915092)); }
-#VT { fill: rgb(calc(255 * 0.348135736761796), 60, calc(255 * 0.651864263238204)); }
-#VA { fill: rgb(calc(255 * 0.471736237228453), 60, calc(255 * 0.528263762771547)); }
-#WA { fill: rgb(calc(255 * 0.412130687999352), 60, calc(255 * 0.587869312000648)); }
-#WV { fill: rgb(calc(255 * 0.721610522512958), 60, calc(255 * 0.278389477487042)); }
-#WI { fill: rgb(calc(255 * 0.504079890380297), 60, calc(255 * 0.495920109619703)); }
-#WY { fill: rgb(calc(255 * 0.757053196291538), 60, calc(255 * 0.242946803708462)); }
+#AL { fill: rgb(calc(255 * 0.64), 60, calc(255 * 0.36)); }
+#AK { fill: rgb(calc(255 * 0.58), 60, calc(255 * 0.42)); }
+#AZ { fill: rgb(calc(255 * 0.52), 60, calc(255 * 0.48)); }
+#AR { fill: rgb(calc(255 * 0.64), 60, calc(255 * 0.36)); }
+#CA { fill: rgb(calc(255 * 0.34), 60, calc(255 * 0.66)); }
+#CO { fill: rgb(calc(255 * 0.47), 60, calc(255 * 0.53)); }
+#CT { fill: rgb(calc(255 * 0.43), 60, calc(255 * 0.57)); }
+#DE { fill: rgb(calc(255 * 0.44), 60, calc(255 * 0.56)); }
+#DC { fill: rgb(calc(255 * 0.04), 60, calc(255 * 0.96)); }
+#FL { fill: rgb(calc(255 * 0.51), 60, calc(255 * 0.49)); }
+#GA { fill: rgb(calc(255 * 0.53), 60, calc(255 * 0.47)); }
+#HI { fill: rgb(calc(255 * 0.33), 60, calc(255 * 0.67)); }
+#ID { fill: rgb(calc(255 * 0.68), 60, calc(255 * 0.32)); }
+#IL { fill: rgb(calc(255 * 0.41), 60, calc(255 * 0.59)); }
+#IN { fill: rgb(calc(255 * 0.6), 60, calc(255 * 0.4)); }
+#IA { fill: rgb(calc(255 * 0.55), 60, calc(255 * 0.45)); }
+#KS { fill: rgb(calc(255 * 0.61), 60, calc(255 * 0.39)); }
+#KY { fill: rgb(calc(255 * 0.66), 60, calc(255 * 0.34)); }
+#LA { fill: rgb(calc(255 * 0.6), 60, calc(255 * 0.4)); }
+#ME { fill: rgb(calc(255 * 0.48), 60, calc(255 * 0.52)); }
+#MD { fill: rgb(calc(255 * 0.36), 60, calc(255 * 0.64)); }
+#MA { fill: rgb(calc(255 * 0.35), 60, calc(255 * 0.65)); }
+#MI { fill: rgb(calc(255 * 0.5), 60, calc(255 * 0.5)); }
+#MN { fill: rgb(calc(255 * 0.49), 60, calc(255 * 0.51)); }
+#MS { fill: rgb(calc(255 * 0.59), 60, calc(255 * 0.41)); }
+#MO { fill: rgb(calc(255 * 0.6), 60, calc(255 * 0.4)); }
+#MT { fill: rgb(calc(255 * 0.61), 60, calc(255 * 0.39)); }
+#NE { fill: rgb(calc(255 * 0.64), 60, calc(255 * 0.36)); }
+#NV { fill: rgb(calc(255 * 0.49), 60, calc(255 * 0.51)); }
+#NH { fill: rgb(calc(255 * 0.5), 60, calc(255 * 0.5)); }
+#NJ { fill: rgb(calc(255 * 0.43), 60, calc(255 * 0.57)); }
+#NM { fill: rgb(calc(255 * 0.45), 60, calc(255 * 0.55)); }
+#NY { fill: rgb(calc(255 * 0.38), 60, calc(255 * 0.62)); }
+#NC { fill: rgb(calc(255 * 0.52), 60, calc(255 * 0.48)); }
+#ND { fill: rgb(calc(255 * 0.7), 60, calc(255 * 0.3)); }
+#OH { fill: rgb(calc(255 * 0.54), 60, calc(255 * 0.46)); }
+#OK { fill: rgb(calc(255 * 0.69), 60, calc(255 * 0.31)); }
+#OR { fill: rgb(calc(255 * 0.44), 60, calc(255 * 0.56)); }
+#PA { fill: rgb(calc(255 * 0.5), 60, calc(255 * 0.5)); }
+#RI { fill: rgb(calc(255 * 0.42), 60, calc(255 * 0.58)); }
+#SC { fill: rgb(calc(255 * 0.57), 60, calc(255 * 0.43)); }
+#SD { fill: rgb(calc(255 * 0.66), 60, calc(255 * 0.34)); }
+#TN { fill: rgb(calc(255 * 0.64), 60, calc(255 * 0.36)); }
+#TX { fill: rgb(calc(255 * 0.55), 60, calc(255 * 0.45)); }
+#UT { fill: rgb(calc(255 * 0.62), 60, calc(255 * 0.38)); }
+#VT { fill: rgb(calc(255 * 0.35), 60, calc(255 * 0.65)); }
+#VA { fill: rgb(calc(255 * 0.47), 60, calc(255 * 0.53)); }
+#WA { fill: rgb(calc(255 * 0.41), 60, calc(255 * 0.59)); }
+#WV { fill: rgb(calc(255 * 0.72), 60, calc(255 * 0.28)); }
+#WI { fill: rgb(calc(255 * 0.5), 60, calc(255 * 0.5)); }
+#WY { fill: rgb(calc(255 * 0.76), 60, calc(255 * 0.24)); }
+
+#AL.blue-yellow { fill: rgb(135, 135, 73); }
+#AK.blue-yellow { fill: rgb(128, 128, 81); }
+#AZ.blue-yellow { fill: rgb(122, 122, 88); }
+#AR.blue-yellow { fill: rgb(135, 135, 73); }
+#CA.blue-yellow { fill: rgb(103, 103, 112); }
+#CO.blue-yellow { fill: rgb(117, 117, 95); }
+#CT.blue-yellow { fill: rgb(113, 113, 100); }
+#DE.blue-yellow { fill: rgb(114, 114, 99); }
+#DC.blue-yellow { fill: rgb(72, 72, 151); }
+#FL.blue-yellow { fill: rgb(121, 121, 90); }
+#GA.blue-yellow { fill: rgb(123, 123, 87); }
+#HI.blue-yellow { fill: rgb(102, 102, 113); }
+#ID.blue-yellow { fill: rgb(139, 139, 68); }
+#IL.blue-yellow { fill: rgb(111, 111, 103); }
+#IN.blue-yellow { fill: rgb(130, 130, 78); }
+#IA.blue-yellow { fill: rgb(125, 125, 85); }
+#KS.blue-yellow { fill: rgb(131, 131, 77); }
+#KY.blue-yellow { fill: rgb(137, 137, 70); }
+#LA.blue-yellow { fill: rgb(130, 130, 78); }
+#ME.blue-yellow { fill: rgb(118, 118, 94); }
+#MD.blue-yellow { fill: rgb(105, 105, 109); }
+#MA.blue-yellow { fill: rgb(104, 104, 111); }
+#MI.blue-yellow { fill: rgb(120, 120, 91); }
+#MN.blue-yellow { fill: rgb(119, 119, 92); }
+#MS.blue-yellow { fill: rgb(129, 129, 79); }
+#MO.blue-yellow { fill: rgb(130, 130, 78); }
+#MT.blue-yellow { fill: rgb(131, 131, 77); }
+#NE.blue-yellow { fill: rgb(135, 135, 73); }
+#NV.blue-yellow { fill: rgb(119, 119, 92); }
+#NH.blue-yellow { fill: rgb(120, 120, 91); }
+#NJ.blue-yellow { fill: rgb(113, 113, 100); }
+#NM.blue-yellow { fill: rgb(115, 115, 98); }
+#NY.blue-yellow { fill: rgb(108, 108, 107); }
+#NC.blue-yellow { fill: rgb(122, 122, 88); }
+#ND.blue-yellow { fill: rgb(141, 141, 65); }
+#OH.blue-yellow { fill: rgb(124, 124, 86); }
+#OK.blue-yellow { fill: rgb(140, 140, 66); }
+#OR.blue-yellow { fill: rgb(114, 114, 99); }
+#PA.blue-yellow { fill: rgb(120, 120, 91); }
+#RI.blue-yellow { fill: rgb(112, 112, 101); }
+#SC.blue-yellow { fill: rgb(127, 127, 82); }
+#SD.blue-yellow { fill: rgb(137, 137, 70); }
+#TN.blue-yellow { fill: rgb(135, 135, 73); }
+#TX.blue-yellow { fill: rgb(125, 125, 85); }
+#UT.blue-yellow { fill: rgb(132, 132, 75); }
+#VT.blue-yellow { fill: rgb(104, 104, 111); }
+#VA.blue-yellow { fill: rgb(117, 117, 95); }
+#WA.blue-yellow { fill: rgb(111, 111, 103); }
+#WV.blue-yellow { fill: rgb(143, 143, 62); }
+#WI.blue-yellow { fill: rgb(120, 120, 91); }
+#WY.blue-yellow { fill: rgb(147, 147, 57); }
+
+#AL.grayscale { fill: rgb(164, 164, 164); }
+#AK.grayscale { fill: rgb(149, 149, 149); }
+#AZ.grayscale { fill: rgb(132, 132, 132); }
+#AR.grayscale { fill: rgb(164, 164, 164); }
+#CA.grayscale { fill: rgb(86, 86, 86); }
+#CO.grayscale { fill: rgb(121, 121, 121); }
+#CT.grayscale { fill: rgb(109, 109, 109); }
+#DE.grayscale { fill: rgb(112, 112, 112); }
+#DC.grayscale { fill: rgb(11, 11, 11); }
+#FL.grayscale { fill: rgb(129, 129, 129); }
+#GA.grayscale { fill: rgb(134, 134, 134); }
+#HI.grayscale { fill: rgb(83, 83, 83); }
+#ID.grayscale { fill: rgb(174, 174, 174); }
+#IL.grayscale { fill: rgb(104, 104, 104); }
+#IN.grayscale { fill: rgb(153, 153, 153); }
+#IA.grayscale { fill: rgb(140, 140, 140); }
+#KS.grayscale { fill: rgb(156, 156, 156); }
+#KY.grayscale { fill: rgb(167, 167, 167); }
+#LA.grayscale { fill: rgb(153, 153, 153); }
+#ME.grayscale { fill: rgb(123, 123, 123); }
+#MD.grayscale { fill: rgb(92, 92, 92); }
+#MA.grayscale { fill: rgb(90, 90, 90); }
+#MI.grayscale { fill: rgb(128, 128, 128); }
+#MN.grayscale { fill: rgb(125, 125, 125); }
+#MS.grayscale { fill: rgb(151, 151, 151); }
+#MO.grayscale { fill: rgb(153, 153, 153); }
+#MT.grayscale { fill: rgb(156, 156, 156); }
+#NE.grayscale { fill: rgb(162, 162, 162); }
+#NV.grayscale { fill: rgb(124, 124, 124); }
+#NH.grayscale { fill: rgb(127, 127, 127); }
+#NJ.grayscale { fill: rgb(109, 109, 109); }
+#NM.grayscale { fill: rgb(116, 116, 116); }
+#NY.grayscale { fill: rgb(97, 97, 97); }
+#NC.grayscale { fill: rgb(132, 132, 132); }
+#ND.grayscale { fill: rgb(178, 178, 178); }
+#OH.grayscale { fill: rgb(138, 138, 138); }
+#OK.grayscale { fill: rgb(177, 177, 177); }
+#OR.grayscale { fill: rgb(112, 112, 112); }
+#PA.grayscale { fill: rgb(128, 128, 128); }
+#RI.grayscale { fill: rgb(106, 106, 106); }
+#SC.grayscale { fill: rgb(147, 147, 147); }
+#SD.grayscale { fill: rgb(168, 168, 168); }
+#TN.grayscale { fill: rgb(162, 162, 162); }
+#TX.grayscale { fill: rgb(140, 140, 140); }
+#UT.grayscale { fill: rgb(159, 159, 159); }
+#VT.grayscale { fill: rgb(89, 89, 89); }
+#VA.grayscale { fill: rgb(120, 120, 120); }
+#WA.grayscale { fill: rgb(105, 105, 105); }
+#WV.grayscale { fill: rgb(184, 184, 184); }
+#WI.grayscale { fill: rgb(129, 129, 129); }
+#WY.grayscale { fill: rgb(193, 193, 193); }

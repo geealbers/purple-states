@@ -36,7 +36,7 @@ body {
 ul[role=navigation] {
   display: table;
   text-align: center;
-  margin: 4vh auto;
+  margin: 2vh auto 4vh;
   padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -48,6 +48,7 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 480px) {
   ul[role=navigation] {
+    margin: 3vh auto 2vh;
     font-size: 1.35rem;
     line-height: 1.6;
   }
@@ -83,7 +84,7 @@ svg#info {
   stroke-width: 0.25;
   stroke-linecap: round;
   stroke-linejoin: round;
-  fill: rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
+  fill: #e5e5e5;
 }
 
 .map-info * {
@@ -131,18 +132,36 @@ svg#info {
   display: inline-block;
   margin-bottom: -.7vh;
 }
-#dem-75 {
-  background-color: rgb(calc(255 * 0.25), 60, calc(255 * 0.75));
+
+#dem-75 { background-color: rgb(calc(255 * 0.25), 60, calc(255 * 0.75)); }
+#dem-65 { background-color: rgb(calc(255 * 0.35), 60, calc(255 * 0.65)); }
+#split { background-color: rgb(calc(255 * 0.50), 60, calc(255 * 0.50)); }
+#rep-65 { background-color: rgb(calc(255 * 0.65), 60, calc(255 * 0.35)); }
+#rep-75 { background-color: rgb(calc(255 * 0.75), 60, calc(255 * 0.25)); }
+
+#dem-75.blue-yellow { background-color: rgb(94, 94, 123.5); }
+#dem-65.blue-yellow { background-color: rgb(104.4, 104.4, 110.5); }
+#split.blue-yellow { background-color: rgb(120, 120, 91); }
+#rep-65.blue-yellow { background-color: rgb(135.6, 135.6, 71.5); }
+#rep-75.blue-yellow { background-color: rgb(146, 146, 58.5); }
+
+#dem-75.grayscale { background-color: rgb(63.75, 64, 64); }
+#dem-65.grayscale { background-color: rgb(89, 89, 89); }
+#split.grayscale { background-color: rgb(128, 128, 128); }
+#rep-65.grayscale { background-color: rgb(166, 166, 166); }
+#rep-75.grayscale { background-color: rgb(191, 191, 191); }
+
+#color-select {
+  padding: .5rem;
 }
-#dem-65 {
-  background-color: rgb(calc(255 * 0.35), 60, calc(255 * 0.65));
+#color-select input {
+  margin-left: .5rem;
 }
-#split {
-  background-color: rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
-}
-#rep-65 {
-  background-color: rgb(calc(255 * 0.65), 60, calc(255 * 0.35));
-}
-#rep-75 {
-  background-color: rgb(calc(255 * 0.75), 60, calc(255 * 0.25));
+@media screen and (max-width: 480px) {
+  #color-select {
+    font-size: .875rem;
+    width: 100%;
+    background-color: #494949;
+    color: #e5e5e5;
+  }
 }

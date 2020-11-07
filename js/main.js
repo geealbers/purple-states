@@ -21,3 +21,28 @@ function tagYear(el) {
   el.setAttribute("id", "current-year");
 
 }
+
+// Toggle classes on states and color key to allow for color blindness variants
+function changeColor(button) {
+
+   var color = button.id;
+   var states = document.getElementsByClassName("state");
+   var keys = document.getElementsByClassName("key-item");
+
+   Array.prototype.forEach.call(states, function(el) {
+
+       el.setAttribute("class", "");
+       el.classList.add("state");
+       el.classList.add(color);
+
+   });
+
+   Array.prototype.forEach.call(keys, function(el) {
+
+       el.setAttribute("class", "");
+       el.classList.add("key-item");
+       el.classList.add(color);
+
+   });
+
+}
