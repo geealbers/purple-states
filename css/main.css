@@ -96,7 +96,7 @@ svg#info {
   max-width: 920px;
   font-size: 1rem;
   max-height: 24vh;
-  overflow: scroll;
+  overflow: auto;
   margin-right: 1.75rem;
 }
 .map-info--underlay {
