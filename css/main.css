@@ -133,16 +133,21 @@ svg#info {
 }
 #dem-75 {
   background-color: rgb(calc(255 * 0.25), 60, calc(255 * 0.75));
+  background-color: rgb(87.75, 94.5, 118);
 }
 #dem-65 {
   background-color: rgb(calc(255 * 0.35), 60, calc(255 * 0.65));
+  background-color: rgb(101.25, 103.9, 103.2);
 }
 #split {
   background-color: rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
+  background-color: rgb(121.5, 118, 81);
 }
 #rep-65 {
   background-color: rgb(calc(255 * 0.65), 60, calc(255 * 0.35));
+  background-color: rgb(141.75, 132.1, 58.8);
 }
 #rep-75 {
   background-color: rgb(calc(255 * 0.75), 60, calc(255 * 0.25));
+  background-color: rgb(155.25, 141.5, 44);
 }
