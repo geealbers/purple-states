@@ -74,10 +74,10 @@ function toggleLabels(el) {
     var labels = document.getElementById("map-labels--electoral");
     var status = labels.classList;
     if ( status == "hidden" ) {
-      labels.setAttribute("class", "");
+      labels.classList.remove("hidden");
       el.innerHTML = "hide labels";
     } else {
-      labels.setAttribute("class", "hidden");
+      labels.classList.add("hidden");
       el.innerHTML = "labels";
     }
 }
