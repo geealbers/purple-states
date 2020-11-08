@@ -62,10 +62,13 @@ a#current-year {
   border-bottom: 2px solid rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
 }
 
-svg#map {
+.map {
   margin: 0 auto;
   max-height: 68vh;
   width: -moz-max-content;
+}
+.map.hidden {
+  display: none;
 }
 
 svg#info {
@@ -151,17 +154,23 @@ svg#info {
 #rep-65.grayscale { background-color: rgb(166, 166, 166); }
 #rep-75.grayscale { background-color: rgb(191, 191, 191); }
 
-#color-select {
-  padding: .5rem;
+#color-select,
+#map-select {
+  padding: .5rem .5rem 0;
 }
-#color-select input {
+#color-select input,
+#map-select input {
   margin-left: .5rem;
 }
 @media screen and (max-width: 480px) {
-  #color-select {
+  #color-select,
+  #map-select {
     font-size: .875rem;
     width: 100%;
     background-color: #494949;
     color: #e5e5e5;
+  }
+  #map-select {
+    padding-bottom: .5rem;
   }
 }

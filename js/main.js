@@ -46,3 +46,25 @@ function changeColor(button) {
    });
 
 }
+
+// Show and hide variant maps
+function changeMap(button) {
+
+    var mapPrefix = "map-"
+    var selectedMap = mapPrefix.concat(button.id);
+    var maps = document.getElementsByClassName("map");
+
+    Array.prototype.forEach.call(maps, function(map) {
+
+      if (map.id == selectedMap) {
+        map.setAttribute("class", "");
+        map.classList.add("map");
+      } else {
+        map.setAttribute("class", "");
+        map.classList.add("map");
+        map.classList.add("hidden");
+      }
+
+     });
+
+}
