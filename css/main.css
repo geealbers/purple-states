@@ -36,7 +36,7 @@ body {
 ul[role=navigation] {
   display: table;
   text-align: center;
-  margin: 2vh auto 4vh;
+  margin: 3vh auto 4vh;
   padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -51,9 +51,6 @@ ul[role=navigation] li {
     margin: 4vh auto 3vh;
     font-size: 1.15rem;
     line-height: 1.6;
-  }
-  ul[role=navigation] li {
-    margin: 0 .25rem;
   }
 }
 
@@ -162,6 +159,9 @@ svg#info {
 #rep-65.grayscale { background-color: rgb(166, 166, 166); }
 #rep-75.grayscale { background-color: rgb(191, 191, 191); }
 
+form {
+  display: inline-block;
+}
 #color-select,
 #map-select {
   padding: .5rem .5rem 0;
@@ -170,7 +170,14 @@ svg#info {
 #map-select input {
   margin-left: .5rem;
 }
+#map-select {
+  border-right: 1px solid rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
+  padding-right: 1.25rem;
+}
 @media screen and (max-width: 480px) {
+  form {
+    display: block;
+  }
   #color-select,
   #map-select {
     font-size: .875rem;
@@ -178,7 +185,11 @@ svg#info {
     background-color: #494949;
     color: #e5e5e5;
   }
-  #map-select {
+  #color-select {
     padding-bottom: .5rem;
+  }
+  #map-select {
+    padding-right: .5rem;
+    border-right-width: 0;
   }
 }
