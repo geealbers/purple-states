@@ -48,9 +48,12 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 480px) {
   ul[role=navigation] {
-    margin: 3vh auto 2vh;
-    font-size: 1.35rem;
+    margin: 4vh auto 3vh;
+    font-size: 1.15rem;
     line-height: 1.6;
+  }
+  ul[role=navigation] li {
+    margin: 0 .25rem;
   }
 }
 
@@ -122,6 +125,11 @@ svg#info {
   display: table;
   font-size: 1rem;
   padding: 0;
+}
+@media screen and (max-width: 480px) {
+  .map-key {
+    font-size: .875rem;
+  }
 }
 .map-key li {
   display: inline-block;
