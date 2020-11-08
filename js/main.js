@@ -68,3 +68,18 @@ function changeMap(button) {
      });
 
 }
+
+// Toggle state labels on electoral map
+function toggleLabels(el) {
+    var labels = document.getElementById("map-labels--electoral");
+    var status = labels.classList;
+    if ( status == "hidden" ) {
+      labels.setAttribute("class", "");
+      el.innerHTML = "hide labels";
+    } else {
+      labels.setAttribute("class", "hidden");
+      el.innerHTML = "labels";
+    }
+}
+
+
