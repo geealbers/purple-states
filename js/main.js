@@ -72,8 +72,8 @@ function changeMap(button) {
 // Toggle state labels on electoral map
 function toggleLabels(el) {
     var labels = document.getElementById("map-labels--electoral");
-    var status = labels.classList;
-    if ( status == "hidden" ) {
+    var status = labels.classList.toString();
+    if ( status.includes("hidden") ) {
       labels.classList.remove("hidden");
       el.innerHTML = "hide labels";
     } else {
