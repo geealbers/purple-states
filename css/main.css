@@ -36,7 +36,7 @@ body {
 ul[role=navigation] {
   display: table;
   text-align: center;
-  margin: 2vh auto 4vh;
+  margin: 3vh auto 4vh;
   padding: 0 1rem;
   font-size: 1.5rem;
   line-height: 1.3;
@@ -48,8 +48,8 @@ ul[role=navigation] li {
 }
 @media screen and (max-width: 480px) {
   ul[role=navigation] {
-    margin: 3vh auto 2vh;
-    font-size: 1.35rem;
+    margin: 4vh auto 3vh;
+    font-size: 1.15rem;
     line-height: 1.6;
   }
 }
@@ -62,10 +62,37 @@ a#current-year {
   border-bottom: 2px solid rgb(127, 60, 127);
 }
 
-svg#map {
+button {
+  font-size: 100%;
+  font-family: inherit;
+  border: 0;
+  padding: 0;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+button:hover {
+  color: rgb(90, 60, 90);
+}
+
+.map {
   margin: 0 auto;
   max-height: 68vh;
   width: -moz-max-content;
+}
+.map.hidden {
+  display: none;
+}
+.state-label,
+.state-count {
+  font-size: 9px;
+  fill: #e5e5e5;
+}
+.state-label {
+  font-weight: 700;
+}
+.map-labels.hidden {
+  display: none;
 }
 
 svg#info {
@@ -120,6 +147,11 @@ svg#info {
   font-size: 1rem;
   padding: 0;
 }
+@media screen and (max-width: 480px) {
+  .map-key {
+    font-size: .875rem;
+  }
+}
 .map-key li {
   display: inline-block;
   margin-right: 1rem;
@@ -151,17 +183,52 @@ svg#info {
 #rep-65.grayscale { background-color: rgb(166, 166, 166); }
 #rep-75.grayscale { background-color: rgb(191, 191, 191); }
 
-#color-select {
-  padding: .5rem;
+form {
+  display: inline-block;
 }
-#color-select input {
+#color-select,
+#map-select {
+  padding: .5rem .5rem 0;
+}
+#color-select input,
+#map-select input {
   margin-left: .5rem;
 }
+#map-select {
+  border-right: 1px solid rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
+  padding-right: 1.25rem;
+}
+#map-select button {
+  padding: 0 1px;
+  border-bottom: 1px solid rgb(127, 60, 127);
+}
+#map-select button:hover {
+  border-bottom-color: color: rgb(90, 60, 90);
+}
 @media screen and (max-width: 480px) {
-  #color-select {
+  form {
+    display: block;
+  }
+  #color-select,
+  #map-select {
     font-size: .875rem;
     width: 100%;
     background-color: #494949;
     color: #e5e5e5;
+  }
+  #color-select {
+    padding-bottom: .5rem;
+  }
+  #map-select {
+    padding-right: .5rem;
+    border-right-width: 0;
+  }
+  #map-select button {
+    color: #e5e5e5;
+    border-bottom-color: #e5e5e5;
+  }
+  #map-select button:hover {
+    color: #c8c8c8;
+    border-bottom-color: #c8c8c8;
   }
 }

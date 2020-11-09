@@ -55,7 +55,12 @@
   <p class="map-description">In the United States, no state ever votes 100% Democratic (blue) or 100% Republican (red), and yet this is how we are accustomed to seeing our electoral maps illustrated, despite a 2009 study showing that this can exacerbate polarization. <a href="https://github.com/geealbers/purple-states#purple-states-of-america-" target="_blank"><em>Read more ...</em></a></p>
 
 </div>
-  
+
+<form id="map-select">
+  <input type="radio" name="map" id="geographic" onchange="changeMap(this)" checked> Geographic</input>
+  <input type="radio" name="map" id="electoral" onchange="changeMap(this)"> Electoral (<button type="button" onclick="toggleLabels(this)">labels</button>)</input>
+</form>
+
 <form id="color-select">
   <input type="radio" name="color" id="purple" onchange="changeColor(this)" checked> Purple</input>
   <input type="radio" name="color" id="blue-yellow" onchange="changeColor(this)"> Blue-Yellow</input>
@@ -80,7 +85,127 @@
   <li><a href="#" onclick="changeCSS('css/2020.css', 2); tagYear(this)" id="current-year">2020</a> *</li>
 </ul>
 
-<svg version="1.1" id="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+<svg version="1.1" id="map-electoral" class="map hidden" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+	 y="0px" viewBox="0 0 624 377" style="enable-background:new 0 0 624 377;" xml:space="preserve">
+  <rect id="WY" x="143" y="130" class="state" width="39" height="13"/>
+  <polygon id="WV" class="state" points="390,143 390,156 377,156 377,169 364,169 364,182 390,182 390,169 403,169 403,143 "/>
+  <polygon id="WI" class="state" points="234,78 234,104 247,104 247,117 286,117 286,91 273,91 273,78 "/>
+  <polygon id="WA" class="state" points="39,91 39,117 52,117 52,130 117,130 117,104 52,104 52,91 "/>
+  <polygon id="VT" class="state" points="520,26 520,52 533,52 533,39 546,39 546,26 "/>
+  <polygon id="VA" class="state" points="403,156 403,169 390,169 390,182 351,182 351,195 468,195 468,182 429,182 429,169 416,169
+  	416,156 "/>
+  <rect id="UT" x="130" y="143" class="state" width="26" height="39"/>
+  <polygon id="TX" class="state" points="182,195 182,208 169,208 169,234 182,234 182,273 195,273 195,260 208,260 208,286 221,286
+  	221,299 234,299 234,286 247,286 247,273 260,273 260,208 221,208 221,195 "/>
+  <polygon id="TN" class="state" points="286,195 286,221 351,221 351,208 364,208 364,195 "/>
+  <rect id="SD" x="169" y="117" class="state" width="39" height="13"/>
+  <polygon id="SC" class="state" points="377,208 377,234 390,234 390,247 403,247 403,260 416,260 416,247 429,247 429,234 416,234
+  	416,221 403,221 403,208 "/>
+  <rect id="RI" x="559" y="78" class="state" width="26" height="26"/>
+  <polygon id="PA" class="state" points="390,91 390,143 481,143 481,130 468,130 468,104 403,104 403,91 "/>
+  <polygon id="OR" class="state" points="39,117 39,143 117,143 117,130 52,130 52,117 "/>
+  <polygon id="OK" class="state" points="182,182 182,195 221,195 221,208 247,208 247,182 "/>
+  <polygon id="OH" class="state" points="377,91 377,104 364,104 364,117 338,117 338,169 377,169 377,156 390,156 390,91 "/>
+  <polygon id="NV" class="state" points="104,143 104,169 117,169 117,195 130,195 130,143 "/>
+  <polygon id="NM" class="state" points="156,182 156,221 169,221 169,208 182,208 182,182 "/>
+  <polygon id="NY" class="state" points="403,91 403,104 507,104 507,117 520,117 520,26 507,26 507,39 494,39 494,52 481,52 481,65
+  	455,65 455,78 416,78 416,91 "/>
+  <polygon id="NJ" class="state" points="468,104 468,130 481,130 481,156 494,156 494,169 507,169 507,156 520,156 520,117 507,117
+  	507,104 "/>
+  <polygon id="NH" class="state" points="533,52 559,52 559,13 546,13 546,39 533,39 "/>
+  <polygon id="NE" class="state" points="182,130 182,143 195,143 195,156 234,156 234,143 208,143 208,130 "/>
+  <rect id="ND" x="169" y="104" class="state" width="39" height="13"/>
+  <polygon id="NC" class="state" points="364,195 364,208 351,208 351,221 377,221 377,208 403,208 403,221 416,221 416,234 442,234
+  	442,221 455,221 455,195 "/>
+  <rect id="MT" x="130" y="117" class="state" width="39" height="13"/>
+  <polygon id="MS" class="state" points="286,221 286,247 299,247 299,273 312,273 312,221 "/>
+  <polygon id="MO" class="state" points="234,143 234,182 247,182 247,195 273,195 273,208 286,208 286,182 273,182 273,169 260,169
+  	260,156 247,156 247,143 "/>
+  <polygon id="MN" class="state" points="260,65 221,65 221,78 208,78 208,117 247,117 247,104 234,104 234,78 260,78 "/>
+  <polygon id="MI" class="state" points="299,52 299,117 351,117 351,65 338,65 338,91 325,91 325,52 "/>
+  <polygon id="ME" class="state" points="559,13 559,39 572,39 572,26 585,26 585,0 572,0 572,13 "/>
+  <polygon id="MD" class="state" points="403,143 403,156 442,156 442,182 481,182 481,169 468,169 468,143 "/>
+  <polygon id="MA" class="state" points="520,52 520,78 585,78 585,104 598,104 598,65 559,65 559,52 "/>
+  <polygon id="LA" class="state" points="260,234 260,273 299,273 299,247 286,247 286,234 "/>
+  <polygon id="KY" class="state" points="325,169 325,182 286,182 286,195 351,195 351,182 364,182 364,169 "/>
+  <rect id="KS" x="195" y="156" class="state" width="39" height="26"/>
+  <polygon id="IN" class="state" points="299,117 299,130 312,130 312,169 299,169 299,182 325,182 325,169 338,169 338,117 "/>
+  <polygon id="IL" class="state" points="247,117 247,156 260,156 260,169 273,169 273,182 299,182 299,169 312,169 312,130 299,130
+  	299,117 "/>
+  <polygon id="ID" class="state" points="117,104 117,143 143,143 143,130 130,130 130,104 "/>
+  <rect id="IA" x="208" y="117" class="state" width="39" height="26"/>
+  <polygon id="HI" class="state" points="130,299 130,312 143,312 143,325 156,325 156,351 169,351 169,325 156,325 156,312 143,312
+  	143,299 "/>
+  <polygon id="GA" class="state" points="338,221 338,273 390,273 390,260 403,260 403,247 390,247 390,234 377,234 377,221 "/>
+  <polygon id="FL" class="state" points="325,286 351,286 351,312 364,312 364,338 377,338 377,351 390,351 390,364 403,364 403,377
+  	416,377 416,364 429,364 429,338 416,338 416,312 403,312 403,286 390,286 390,273 325,273 "/>
+  <polygon id="DE" class="state" points="468,143 468,169 494,169 494,156 481,156 481,143 "/>
+  <polygon id="DC" class="state" points="416,156 416,169 429,169 429,182 442,182 442,156 "/>
+  <polygon id="CT" class="state" points="520,78 520,117 533,117 533,104 559,104 559,78 "/>
+  <rect id="CO" x="156" y="143" class="state" width="39" height="39"/>
+  <polygon id="CA" class="state" points="39,143 39,221 52,221 52,234 65,234 65,247 78,247 78,273 130,273 130,195 117,195 117,169
+  	104,169 104,143 "/>
+  <polygon id="AZ" class="state" points="130,182 130,260 143,260 143,247 156,247 156,182 "/>
+  <polygon id="AR" class="state" points="247,195 247,208 260,208 260,234 286,234 286,208 273,208 273,195 "/>
+  <polygon id="AL" class="state" points="312,286 312,221 338,221 338,273 325,273 325,286 "/>
+  <polygon id="AK" class="state" points="77.96,312 77.96,338 51.96,338 51.96,325 64.96,325 64.96,312 "/>
+  <g id="map-labels--electoral" class="map-labels hidden">
+  <text id="WY-label" transform="matrix(1 0 0 1 150.8429 139.8795)"><tspan x="0" y="0" class="state-label">WY </tspan><tspan x="18.65" y="0" class="state-count">3</tspan></text>
+  <text id="WV-label" transform="matrix(1 0 0 1 378.2486 165.7354)"><tspan x="0" y="0" class="state-label">WV </tspan><tspan x="18.83" y="0" class="state-count">5</tspan></text>
+  <text id="WI-label" transform="matrix(1 0 0 1 259.8691 102.2354)"><tspan x="0" y="0" class="state-label">WI</tspan><tspan x="2.29" y="10" class="state-count">10</tspan></text>
+  <text id="WA-label" transform="matrix(1 0 0 1 76.2041 115.3795)"><tspan x="0" y="0" class="state-label">WA</tspan><tspan x="4.36" y="10" class="state-count">12</tspan></text>
+  <text id="VT-label" transform="matrix(1 0 0 1 522.92 35.7354)"><tspan x="0" y="0" class="state-label">VT </tspan><tspan x="15.48" y="0" class="state-count">3</tspan></text>
+  <text id="VA-label" transform="matrix(1 0 0 1 402.6172 180.3795)"><tspan x="0" y="0" class="state-label">VA</tspan><tspan x="2.87" y="10" class="state-count">13</tspan></text>
+  <text id="UT-label" transform="matrix(1 0 0 1 136.2344 154.3795)"><tspan x="0" y="0" class="state-label">UT</tspan><tspan x="4.21" y="10" class="state-count">6</tspan></text>
+  <text id="TX-label" transform="matrix(1 0 0 1 214.2559 232.2563)"><tspan x="0" y="0" class="state-label">TX</tspan><tspan x="1.86" y="10" class="state-count">38</tspan></text>
+  <text id="TN-label" transform="matrix(1 0 0 1 318.2251 206.2354)"><tspan x="0" y="0" class="state-label">TN</tspan><tspan x="3.44" y="10" class="state-count">11</tspan></text>
+  <text id="SD-label" transform="matrix(1 0 0 1 178.5621 126.8795)"><tspan x="0" y="0" class="state-label">SD </tspan><tspan x="15.21" y="0" class="state-count">3</tspan></text>
+  <text id="SC-label" transform="matrix(1 0 0 1 397.0869 232.3074)"><tspan x="0" y="0" class="state-label">SC</tspan><tspan x="3.37" y="10" class="state-count">9</tspan></text>
+  <text id="RI-label" transform="matrix(1 0 0 1 566.7417 89.2354)"><tspan x="0" y="0" class="state-label">RI</tspan><tspan x="2.55" y="10" class="state-count">4</tspan></text>
+  <text id="PA-label" transform="matrix(1 0 0 1 422.3604 128.2354)"><tspan x="0" y="0" class="state-label">PA</tspan><tspan x="1.71" y="10" class="state-count">20</tspan></text>
+  <text id="OR-label" transform="matrix(1 0 0 1 74.1655 139.7354)"><tspan x="0" y="0" class="state-label">OR </tspan><tspan x="16.28" y="0" class="state-count">7</tspan></text>
+  <text id="OK-label" transform="matrix(1 0 0 1 204.004 191.8795)"><tspan x="0" y="0" class="state-label">OK </tspan><tspan x="16.63" y="0" class="state-count">7</tspan></text>
+  <text id="OH-label" transform="matrix(1 0 0 1 356.6988 141.2354)"><tspan x="0" y="0" class="state-label">OH</tspan><tspan x="3.2" y="10" class="state-count">18</tspan></text>
+  <text id="NY-label" transform="matrix(1 0 0 1 480.5577 76.3074)"><tspan x="0" y="0" class="state-label">NY</tspan><tspan x="2.12" y="10" class="state-count">29</tspan></text>
+  <text id="NV-label" transform="matrix(1 0 0 1 109.9644 154.2354)"><tspan x="0" y="0" class="state-label">NV</tspan><tspan x="4.48" y="10" class="state-count">6</tspan></text>
+  <text id="NM-label" transform="matrix(1 0 0 1 160.9878 193.3795)"><tspan x="0" y="0" class="state-label">NM</tspan><tspan x="5.66" y="10" class="state-count">5</tspan></text>
+  <text id="NJ-label" transform="matrix(1 0 0 1 493.9391 128.3795)"><tspan x="0" y="0" class="state-label">NJ</tspan><tspan x="2.19" y="10" class="state-count">14</tspan></text>
+  <text id="NH-label" transform="matrix(1 0 0 1 534.8087 48.7354)"><tspan x="0" y="0" class="state-label">NH </tspan><tspan x="16.97" y="0" class="state-count">4</tspan></text>
+  <text id="NE-label" transform="matrix(1 0 0 1 204.2695 152.8795)"><tspan x="0" y="0" class="state-label">NE </tspan><tspan x="15.76" y="0" class="state-count">5</tspan></text>
+  <text id="ND-label" transform="matrix(1 0 0 1 177.8599 113.7354)"><tspan x="0" y="0" class="state-label">ND </tspan><tspan x="16.59" y="0" class="state-count">3</tspan></text>
+  <text id="NC-label" transform="matrix(1 0 0 1 422.4054 206.3795)"><tspan x="0" y="0" class="state-label">NC</tspan><tspan x="2.59" y="10" class="state-count">15</tspan></text>
+  <text id="MT-label" transform="matrix(1 0 0 1 138.4508 126.8795)"><tspan x="0" y="0" class="state-label">MT </tspan><tspan x="17.43" y="0" class="state-count">3</tspan></text>
+  <text id="MS-label" transform="matrix(1 0 0 1 291.69 232.3795)"><tspan x="0" y="0" class="state-label">MS</tspan><tspan x="4.77" y="10" class="state-count">6</tspan></text>
+  <text id="MO-label" transform="matrix(1 0 0 1 252.0415 180.2354)"><tspan x="0" y="0" class="state-label">MO</tspan><tspan x="3.62" y="10" class="state-count">10</tspan></text>
+  <text id="MN-label" transform="matrix(1 0 0 1 212.9878 89.3795)"><tspan x="0" y="0" class="state-label">MN</tspan><tspan x="3.67" y="10" class="state-count">10</tspan></text>
+  <text id="MI-label" transform="matrix(1 0 0 1 318.8194 102.2354)"><tspan x="0" y="0" class="state-label">MI</tspan><tspan x="1.98" y="10" class="state-count">16</tspan></text>
+  <text id="ME-label" transform="matrix(1 0 0 1 560.5929 22.7354)"><tspan x="0" y="0" class="state-label">ME </tspan><tspan x="17.41" y="0" class="state-count">4</tspan></text>
+  <text id="MD-label" transform="matrix(1 0 0 1 447.0152 167.2354)"><tspan x="0" y="0" class="state-label">MD</tspan><tspan x="3.66" y="10" class="state-count">10</tspan></text>
+  <text id="MA-label" transform="matrix(1 0 0 1 540.193 74.7354)"><tspan x="0" y="0" class="state-label">MA </tspan><tspan x="17.96" y="0" class="state-count">11</tspan></text>
+  <text id="LA-label" transform="matrix(1 0 0 1 266.4639 258.2354)"><tspan x="0" y="0" class="state-label">LA</tspan><tspan x="4.09" y="10" class="state-count">8</tspan></text>
+  <text id="KY-label" transform="matrix(1 0 0 1 330.9912 180.3795)"><tspan x="0" y="0" class="state-label">KY</tspan><tspan x="4.56" y="10" class="state-count">8</tspan></text>
+  <text id="KS-label" transform="matrix(1 0 0 1 207.9365 167.2354)"><tspan x="0" y="0" class="state-label">KS</tspan><tspan x="4.01" y="10" class="state-count">6</tspan></text>
+  <text id="IN-label" transform="matrix(1 0 0 1 319.6432 141.3795)"><tspan x="0" y="0" class="state-label">IN</tspan><tspan x="2.03" y="10" class="state-count">11</tspan></text>
+  <text id="IL-label" transform="matrix(1 0 0 1 274.6427 141.3795)"><tspan x="0" y="0" class="state-label">IL</tspan><tspan x="-0.07" y="10" class="state-count">20</tspan></text>
+  <text id="ID-label" transform="matrix(1 0 0 1 120.813 139.7354)"><tspan x="0" y="0" class="state-label">ID </tspan><tspan x="12.95" y="0" class="state-count">4</tspan></text>
+  <text id="IA-label" transform="matrix(1 0 0 1 222.2822 128.3795)"><tspan x="0" y="0" class="state-label">IA</tspan><tspan x="2.66" y="10" class="state-count">6</tspan></text>
+  <text id="HI-label" transform="matrix(1 0 0 1 156.9561 336.2354)"><tspan x="0" y="0" class="state-label">HI </tspan><tspan x="2.84" y="10" class="state-count">4</tspan></text>
+  <text id="GA-label" transform="matrix(1 0 0 1 357.0592 245.3795)"><tspan x="0" y="0" class="state-label">GA</tspan><tspan x="2.74" y="10" class="state-count">16</tspan></text>
+  <text id="FL-label" transform="matrix(1 0 0 1 383.797 323.2354)"><tspan x="0" y="0" class="state-label">FL</tspan><tspan x="1.4" y="10" class="state-count">29</tspan></text>
+  <text id="DE-label" transform="matrix(1 0 0 1 470.794 165.8795)"><tspan x="0" y="0" class="state-label">DE </tspan><tspan x="15.73" y="0" class="state-count">3</tspan></text>
+  <text id="DC-label" transform="matrix(1 0 0 1 418.9404 165.7354)"><tspan x="0" y="0" class="state-label">DC </tspan><tspan x="15.43" y="0" class="state-count">3</tspan></text>
+  <text id="CO-label" transform="matrix(1 0 0 1 168.9596 167.2354)"><tspan x="0" y="0" class="state-label">CO</tspan><tspan x="4" y="10" class="state-count">9</tspan></text>
+  <text id="CT-label" transform="matrix(1 0 0 1 533.3126 89.2354)"><tspan x="0" y="0" class="state-label">CT</tspan><tspan x="4" y="10" class="state-count">7</tspan></text>
+  <text id="CA-label" transform="matrix(1 0 0 1 78.0587 193.3074)"><tspan x="0" y="0" class="state-label">CA</tspan><tspan x="1.76" y="10" class="state-count">55</tspan></text>
+  <text id="AZ-label" transform="matrix(1 0 0 1 136.5269 206.3795)"><tspan x="0" y="0" class="state-label">AZ</tspan><tspan x="3.15" y="10" class="state-count">11</tspan></text>
+  <text id="AR-label" transform="matrix(1 0 0 1 266.0767 219.2354)"><tspan x="0" y="0" class="state-label">AR</tspan><tspan x="4.37" y="10" class="state-count">6</tspan></text>
+  <text id="AL-label" transform="matrix(1 0 0 1 318.4639 245.3795)"><tspan x="0" y="0" class="state-label">AL</tspan><tspan x="3.98" y="10" class="state-count">9</tspan></text>
+  <text id="AK-label" transform="matrix(1 0 0 1 54.443 334.7354)"><tspan x="0" y="0" class="state-label">AK </tspan><tspan x="16.43" y="0" class="state-count">3</tspan></text>
+  </g>
+</svg>
+
+
+<svg version="1.1" id="map-geographic" class="map" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
 	 y="0px" viewBox="0 0 623.51 377.18" style="enable-background:new 0 0 623.51 377.18;" xml:space="preserve">
 <path id="WY" class="state" d="M237.88,97.35l-0.05,1.61l-0.06,1.61l-0.05,1.61l-0.06,1.61l-0.06,1.61l-0.05,1.62l-0.06,1.61
 	l-0.05,1.62l-0.06,1.61l-0.05,1.61l-0.06,1.62l-0.05,1.61l-0.06,1.62l-0.05,1.62l-0.06,1.62l-0.06,1.61l-1.59-0.06l-1.58-0.06
@@ -4721,6 +4846,8 @@
 	l0.08,0.08l0.09,0.05l0.07,0.01l0.06-0.04l0.07-0.08l0.16-0.29l0.46-0.36l0.09-0.03l0.17,0.01l0.09-0.02l0.08-0.07v-0.02l0-0.04
 	l0-0.04l0.01-0.03l0.02-0.01l0.25-0.1l0.01-0.01l0.01-0.02l0.01-0.01h0.02l-0.05-0.05L147.84,326.69z"/>
 </svg>
+
+
 
 <script src="js/main.js"></script>
 
