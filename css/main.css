@@ -91,11 +91,7 @@ button:hover {
 .state-label {
   font-weight: 700;
 }
-.st1 {
-  fill: none;
-}
-
-.hidden {
+.map-labels.hidden {
   display: none;
 }
 
