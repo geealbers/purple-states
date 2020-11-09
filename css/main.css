@@ -58,10 +58,6 @@ a {
   color: rgb(127, 60, 127);
   text-decoration: none;
 }
-a#current-year {
-  border-bottom: 2px solid rgb(127, 60, 127);
-}
-
 button {
   font-size: 100%;
   font-family: inherit;
@@ -73,6 +69,13 @@ button {
 }
 button:hover {
   color: rgb(90, 60, 90);
+}
+
+button#current-year {
+  border-bottom: 2px solid rgb(127, 60, 127);
+}
+button#current-year:hover {
+  border-bottom-color: rgb(90, 60, 90);
 }
 
 .map {
@@ -195,7 +198,7 @@ form {
   margin-left: .5rem;
 }
 #map-select {
-  border-right: 1px solid rgb(calc(255 * 0.50), 60, calc(255 * 0.50));
+  border-right: 1px solid rgb(127, 60, 127);
   padding-right: 1.25rem;
 }
 #map-select button {
