@@ -67,7 +67,9 @@ function drawMap(map,path) {
 
     var sqrtScale = d3.scaleSqrt()
       .domain([0, electoralMax])
-      .range([0, 40]);
+      .range([0, 50]);
+
+    var spreadMap = applySimulation(map.features)
 
     body.selectAll("*").remove()
     body.selectAll("path")
@@ -78,24 +80,38 @@ function drawMap(map,path) {
         .attr("stroke-width", ".5px")
         .attr("fill", "none")
     body.selectAll("circle")
-        .data(map.features)
+        .data(spreadMap)
         .enter().append("circle")
-        .attr("cx", d => path.centroid(d)[0] )
-        .attr("cy", d => path.centroid(d)[1] )
+        .attr("cx", d => d.x)
+        .attr("cy", d => d.y)
         .attr("r", d => sqrtScale(d.properties.electoralVotes) )
         .style("stroke", "none")
         .attr("fill", fillColor )
 
     labels.selectAll("*").remove()
     labels.selectAll("text")
-        .data(map.features)
+        .data(spreadMap)
         .enter().append("text")
-        .attr("x", d => path.centroid(d)[0] )
-        .attr("y", d => path.centroid(d)[1] + (fontSize * .3) )
+        .attr("x", d => d.x)
+        .attr("y", d => d.y + (fontSize * .3))
         .attr("text-anchor", "middle")
         .attr("font-size", fontSize + "px" )
         .attr("fill", "#e5e5e5" )
         .text( d => d.properties.electoralVotes )
+
+    function applySimulation(nodes) {
+        const simulation = d3.forceSimulation(nodes)
+          .force("cx", d3.forceX().x(d => path.centroid(d)[0]).strength(0.3))
+          .force("cy", d3.forceY().y(d => path.centroid(d)[1]).strength(0.3))
+          .force("collide", d3.forceCollide().radius(d => sqrtScale(d.properties.electoralVotes) + 1).strength(1))
+          .stop()
+        let i = 0;
+        while (simulation.alpha() > 0.01 && i < 200) {
+          simulation.tick();
+          i++;
+        }
+        return simulation.nodes();
+      }
 
   } else {
     // Default geographic version of map
