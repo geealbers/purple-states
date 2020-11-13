@@ -23,6 +23,7 @@ function buildMap(y) {
         +v.republican_votes,
         +v.democratic_votes,
         +v.electoral_votes,
+        +v.population,
         v.postal_code ];
     }
     map.features = map.features.map( d => {
@@ -31,7 +32,8 @@ function buildMap(y) {
       d.properties.repVotes = votes[0];
       d.properties.demVotes = votes[1];
       d.properties.electoralVotes = votes[2];
-      d.properties.postalCode = votes[3];
+      d.properties.population = votes[3];
+      d.properties.postalCode = votes[4];
       return d;
     })
 
@@ -60,16 +62,16 @@ function drawMap(map,path) {
   let body = d3.select("#body")
   let labels = d3.select("#labels")
 
-  if ( document.getElementById("electoral").checked ) {
-    //Intial version of map with area of circles representing electoral vote size
+  if ( document.getElementById("population").checked ) {
+    //Intial version of map with area of circles representing population size
 
-    // const electoralMax = d3.max(map.features, d => d.properties.electoralVotes )
-    const electoralMax = 60
+    // const populationMax = d3.max(map.features, d => d.properties.population )
+    const populationMax = 40000000
     const fontSize = 8.5
 
     var sqrtScale = d3.scaleSqrt()
-      .domain([0, electoralMax])
-      .range([0, 50]);
+      .domain([0, populationMax])
+      .range([0, 55]);
 
     var spreadMap = applySimulation(map.features)
 
@@ -86,7 +88,7 @@ function drawMap(map,path) {
         .enter().append("circle")
         .attr("cx", d => d.x)
         .attr("cy", d => d.y)
-        .attr("r", d => sqrtScale(d.properties.electoralVotes) )
+        .attr("r", d => sqrtScale(d.properties.population) )
         .style("stroke", "none")
         .attr("fill", fillColor )
 
@@ -95,27 +97,27 @@ function drawMap(map,path) {
         .data(spreadMap)
         .enter().append("text")
         .attr("x", d => d.x)
-        .attr("y", d => d.y - 1)
+        .attr("y", d => d.y + (fontSize * .3))
         .attr("text-anchor", "middle")
         .attr("font-size", fontSize + "px" )
         .attr("font-weight", "bold")
         .attr("fill", "#e5e5e5" )
         .text( d => d.properties.postalCode )
-    labels.selectAll("text.votes")
-        .data(spreadMap)
-        .enter().append("text")
-        .attr("x", d => d.x)
-        .attr("y", d => d.y + fontSize)
-        .attr("text-anchor", "middle")
-        .attr("font-size", fontSize + "px" )
-        .attr("fill", "#e5e5e5" )
-        .text( d => d.properties.electoralVotes )
+    // labels.selectAll("text.votes")
+    //     .data(spreadMap)
+    //     .enter().append("text")
+    //     .attr("x", d => d.x)
+    //     .attr("y", d => d.y + fontSize)
+    //     .attr("text-anchor", "middle")
+    //     .attr("font-size", fontSize + "px" )
+    //     .attr("fill", "#e5e5e5" )
+    //     .text( d => d.properties.electoralVotes )
 
     function applySimulation(nodes) {
         const simulation = d3.forceSimulation(nodes)
           .force("cx", d3.forceX().x(d => path.centroid(d)[0]).strength(0.3))
           .force("cy", d3.forceY().y(d => path.centroid(d)[1]).strength(0.3))
-          .force("collide", d3.forceCollide().radius(d => sqrtScale(d.properties.electoralVotes) + 1).strength(1))
+          .force("collide", d3.forceCollide().radius(d => sqrtScale(d.properties.population) + 1).strength(1))
           .stop()
         let i = 0;
         while (simulation.alpha() > 0.01 && i < 200) {
@@ -142,7 +144,7 @@ function drawMap(map,path) {
 
 function changeColor() {
 
-  if ( document.getElementById("electoral").checked ) {
+  if ( document.getElementById("population").checked ) {
     d3.select("#body")
       .selectAll("circle")
       .attr("fill", fillColor )
