@@ -1,6 +1,11 @@
-function buildMap(year) {
+function buildMap(y) {
 
-  let body = d3.select("#body")
+  var year;
+  if (y == null) {
+    var year = document.getElementById("current-year").textContent;
+  } else {
+    var year = y
+  }
 
   Promise.all([
       d3.json("../js/states-map.json"),
@@ -16,13 +21,15 @@ function buildMap(year) {
       let state = v.state;
       index[state] = [
         +v.republican_votes,
-        +v.democratic_votes ];
+        +v.democratic_votes,
+        +v.electoral_votes ];
     }
     map.features = map.features.map( d => {
       let state = d.properties.name;
       let votes = index[state];
       d.properties.repVotes = votes[0];
       d.properties.demVotes = votes[1];
+      d.properties.electoralVotes = votes[2];
       return d;
     })
 
@@ -40,8 +47,60 @@ function buildMap(year) {
     var path = d3.geoPath()
         .projection(projection);
 
-    body.selectAll("*").remove()
+    drawMap(map,path);
 
+    }
+
+}
+
+function drawMap(map,path) {
+
+  let body = d3.select("#body")
+  let labels = d3.select("#labels")
+
+  if ( document.getElementById("electoral").checked ) {
+    //Intial version of map with area of circles representing electoral vote size
+
+    // const electoralMax = d3.max(map.features, d => d.properties.electoralVotes )
+    const electoralMax = 60
+    const fontSize = 9
+
+    var sqrtScale = d3.scaleSqrt()
+      .domain([0, electoralMax])
+      .range([0, 40]);
+
+    body.selectAll("*").remove()
+    body.selectAll("path")
+        .data(map.features)
+        .enter().append("path")
+        .attr("d", d => path(d))
+        .attr("stroke", "#b5b5b5")
+        .attr("stroke-width", ".5px")
+        .attr("fill", "none")
+    body.selectAll("circle")
+        .data(map.features)
+        .enter().append("circle")
+        .attr("cx", d => path.centroid(d)[0] )
+        .attr("cy", d => path.centroid(d)[1] )
+        .attr("r", d => sqrtScale(d.properties.electoralVotes) )
+        .style("stroke", "none")
+        .attr("fill", fillColor )
+
+    labels.selectAll("*").remove()
+    labels.selectAll("text")
+        .data(map.features)
+        .enter().append("text")
+        .attr("x", d => path.centroid(d)[0] )
+        .attr("y", d => path.centroid(d)[1] + (fontSize * .3) )
+        .attr("text-anchor", "middle")
+        .attr("font-size", fontSize + "px" )
+        .attr("fill", "#e5e5e5" )
+        .text( d => d.properties.electoralVotes )
+
+  } else {
+    // Default geographic version of map
+    labels.selectAll("*").remove()
+    body.selectAll("*").remove()
     body.selectAll("path")
         .data(map.features)
         .enter().append("path")
@@ -49,34 +108,21 @@ function buildMap(year) {
         .attr("stroke", "#e5e5e5")
         .attr("stroke-width", ".3px")
         .attr("fill", fillColor )
-
-    // Intial version of map with circles representing electoral vote size
-    // body.selectAll("path")
-    //     .data(map.features)
-    //     .enter().append("path")
-    //     .attr("d", d => path(d))
-    //     .attr("stroke", "#999")
-    //     .attr("stroke-width", ".5px")
-    //     .attr("fill", "none")
-    // body.selectAll("circle")
-    //     .data(map.features)
-    //     .enter().append("circle")
-    //     .attr("cx", d => path.centroid(d)[0] )
-    //     .attr("cy", d => path.centroid(d)[1] )
-    //     .attr("r", d => d.properties.electoralVotes )
-    //     .style("stroke", "none")
-    //     .attr("fill", fillColor )
-
-    }
+  }
 
 }
 
 function changeColor() {
 
-  d3.select("#body")
-    .selectAll("path")
-    .attr("fill", fillColor )
-
+  if ( document.getElementById("electoral").checked ) {
+    d3.select("#body")
+      .selectAll("circle")
+      .attr("fill", fillColor )
+  } else {
+    d3.select("#body")
+      .selectAll("path")
+      .attr("fill", fillColor )
+  }
 }
 
 function fillColor(d) {
@@ -148,31 +194,9 @@ function tagYear(el) {
 
 }
 
-// Show and hide variant maps
-function changeMap(button) {
-
-    var mapPrefix = "map-"
-    var selectedMap = mapPrefix.concat(button.id);
-    var maps = document.getElementsByClassName("map");
-
-    Array.prototype.forEach.call(maps, function(map) {
-
-      if (map.id == selectedMap) {
-        map.setAttribute("class", "");
-        map.classList.add("map");
-      } else {
-        map.setAttribute("class", "");
-        map.classList.add("map");
-        map.classList.add("hidden");
-      }
-
-     });
-
-}
-
 // Toggle state labels on electoral map
 function toggleLabels(el) {
-    var labels = document.getElementById("map-labels--electoral");
+    var labels = document.getElementById("labels");
     var status = labels.classList.toString();
     if ( status.includes("hidden") ) {
       labels.classList.remove("hidden");
@@ -182,5 +206,3 @@ function toggleLabels(el) {
       el.innerHTML = "labels";
     }
 }
-
-

@@ -46,8 +46,8 @@
 </div>
 
 <form id="map-select">
-  <input type="radio" name="map" id="geographic" onchange="changeMap(this)" checked> Geographic</input>
-  <input type="radio" name="map" id="electoral" onchange="changeMap(this)"> Electoral (<button type="button" onclick="toggleLabels(this)">labels</button>)</input>
+  <input type="radio" name="map" id="geographic" onchange="buildMap()" checked> Geographic</input>
+  <input type="radio" name="map" id="electoral" onchange="buildMap()"> Electoral (<button type="button" onclick="toggleLabels(this)">labels</button>)</input>
 </form>
 
 <form id="color-select">
@@ -76,6 +76,7 @@
 
 <svg id="d3-map" class="map" viewBox="0 0 624 377">
   <g id="body"></g>
+  <g id="labels" class="map-labels hidden"></g>
 </svg>
 
 <script src="js/d3.min.js"></script>
