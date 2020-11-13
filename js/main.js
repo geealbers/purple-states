@@ -11,45 +11,22 @@ function buildMap(year) {
     let map = datasources[0]
     let votes = datasources[1]
 
-    let demIndex = {}
+    let index = {}
     for (let v of votes[year]) {
       let state = v.state;
-      demIndex[state] = +v.democratic_votes;
+      index[state] = [
+        +v.republican_votes,
+        +v.democratic_votes ];
     }
     map.features = map.features.map( d => {
       let state = d.properties.name;
-      let votes = demIndex[state];
-      d.properties.demVotes = votes;
+      let votes = index[state];
+      d.properties.repVotes = votes[0];
+      d.properties.demVotes = votes[1];
       return d;
     })
 
-    let repIndex = {}
-    for (let v of votes[year]) {
-      let state = v.state;
-      repIndex[state] = +v.republican_votes;
-    }
-    map.features = map.features.map( d => {
-      let state = d.properties.name;
-      let votes =repIndex[state];
-      d.properties.repVotes = votes;
-      return d;
-    })
-
-    // Add electroal vote couts into the data
-    // let electoralIndex = {}
-    // for (let v of votes[year]) {
-    //   let state = v.state;
-    //   electoralIndex[state] = +v.electoral_votes;
-    // }
-    // map.features = map.features.map( d => {
-    //   let state = d.properties.name;
-    //   let votes = electoralIndex[state];
-    //   d.properties.electoralVotes = votes;
-    //   return d;
-    // })
-
-    // console.log(demIndex)
-    // console.log(repIndex)
+    // console.log(index)
     // console.log(electoralVotes)
     // console.log(map)
 
