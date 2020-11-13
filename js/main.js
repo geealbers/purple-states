@@ -48,13 +48,7 @@ function buildMap(year) {
         .attr("d", d => path(d))
         .attr("stroke", "#e5e5e5")
         .attr("stroke-width", ".3px")
-        .attr("fill", function(d) {
-          let total = d.properties.repVotes + d.properties.demVotes;
-          let red = d.properties.repVotes / total * 255;
-          let blue = d.properties.demVotes / total * 255;
-          let color = "rgb(" + red + ", 60, " + blue + ")";
-          return color;
-        })
+        .attr("fill", fillColor )
 
     // Intial version of map with circles representing electoral vote size
     // body.selectAll("path")
@@ -71,15 +65,76 @@ function buildMap(year) {
     //     .attr("cy", d => path.centroid(d)[1] )
     //     .attr("r", d => d.properties.electoralVotes )
     //     .style("stroke", "none")
-    //     .attr("fill", function(d) {
-    //       let total = d.properties.repVotes + d.properties.demVotes;
-    //       let red = d.properties.repVotes / total * 255;
-    //       let blue = d.properties.demVotes / total * 255;
-    //       let color = "rgb(" + red + ", 60, " + blue + ")";
-    //       return color;
-    //     })
+    //     .attr("fill", fillColor )
 
     }
+
+}
+
+function changeColor() {
+
+  d3.select("#body")
+    .selectAll("path")
+    .attr("fill", fillColor )
+
+}
+
+function fillColor(d) {
+
+  const base = 255
+
+  var total = d.properties.repVotes + d.properties.demVotes;
+  var repPercent = d.properties.repVotes / total;
+  var demPercent = d.properties.demVotes / total;
+
+  if ( document.getElementById("blue-yellow").checked )  {
+  // Color formula for Blue-Yellow combinaation for color blindness
+  // could use this same formula to blend other arbitraty colors
+
+    let demR = 68
+    let demG = 68
+    let demB = 156
+
+    let repR = 172
+    let repG = 172
+    let repB = 26
+
+    let diffR = Math.abs(demR - repR) * demPercent;
+    let diffG = Math.abs(demG - repG) * demPercent;
+    let diffB = Math.abs(demB - repB) * demPercent;
+
+    var r;
+    var g;
+    var b;
+
+    if (repR < demR) { var r = Math.round(repR + diffR); } else { var r = Math.round(repR - diffR); };
+    if (repG < demG) { var g = Math.round(repG + diffG); } else { var g = Math.round(repG - diffG); };
+    if (repB < demB) { var b = Math.round(repB + diffB); } else { var b = Math.round(repB - diffB); };
+
+    let color = "rgb(" + r + ", " + g + ", " + b + ")";
+    return color;
+
+  } else if ( document.getElementById("grayscale").checked ) {
+  // Color formula for simple Grayscale
+
+    let r = Math.round(repPercent * base)
+    let g = Math.round(repPercent * base)
+    let b = Math.round(repPercent * base)
+
+    let color = "rgb(" + r + ", " + g + ", " + b + ")";
+    return color;
+
+  } else {
+  // Color forumla for default Purple
+
+    let r = Math.round(repPercent * base)
+    let g = 60
+    let b = Math.round(demPercent * base)
+
+    let color = "rgb(" + r + ", " + g + ", " + b + ")";
+    return color;
+
+  }
 
 }
 
@@ -90,31 +145,6 @@ function tagYear(el) {
 
   currentYear.removeAttribute("id");
   el.setAttribute("id", "current-year");
-
-}
-
-// Toggle classes on states and color key to allow for color blindness variants
-function changeColor(button) {
-
-   var color = button.id;
-   var states = document.getElementsByClassName("state");
-   var keys = document.getElementsByClassName("key-item");
-
-   Array.prototype.forEach.call(states, function(el) {
-
-       el.setAttribute("class", "");
-       el.classList.add("state");
-       el.classList.add(color);
-
-   });
-
-   Array.prototype.forEach.call(keys, function(el) {
-
-       el.setAttribute("class", "");
-       el.classList.add("key-item");
-       el.classList.add(color);
-
-   });
 
 }
 
