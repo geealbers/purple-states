@@ -22,7 +22,8 @@ function buildMap(y) {
       index[state] = [
         +v.republican_votes,
         +v.democratic_votes,
-        +v.electoral_votes ];
+        +v.electoral_votes,
+        v.postal_code ];
     }
     map.features = map.features.map( d => {
       let state = d.properties.name;
@@ -30,6 +31,7 @@ function buildMap(y) {
       d.properties.repVotes = votes[0];
       d.properties.demVotes = votes[1];
       d.properties.electoralVotes = votes[2];
+      d.properties.postalCode = votes[3];
       return d;
     })
 
@@ -63,7 +65,7 @@ function drawMap(map,path) {
 
     // const electoralMax = d3.max(map.features, d => d.properties.electoralVotes )
     const electoralMax = 60
-    const fontSize = 9
+    const fontSize = 8.5
 
     var sqrtScale = d3.scaleSqrt()
       .domain([0, electoralMax])
@@ -89,11 +91,21 @@ function drawMap(map,path) {
         .attr("fill", fillColor )
 
     labels.selectAll("*").remove()
-    labels.selectAll("text")
+    labels.selectAll("text.state")
         .data(spreadMap)
         .enter().append("text")
         .attr("x", d => d.x)
-        .attr("y", d => d.y + (fontSize * .3))
+        .attr("y", d => d.y - 1)
+        .attr("text-anchor", "middle")
+        .attr("font-size", fontSize + "px" )
+        .attr("font-weight", "bold")
+        .attr("fill", "#e5e5e5" )
+        .text( d => d.properties.postalCode )
+    labels.selectAll("text.votes")
+        .data(spreadMap)
+        .enter().append("text")
+        .attr("x", d => d.x)
+        .attr("y", d => d.y + fontSize)
         .attr("text-anchor", "middle")
         .attr("font-size", fontSize + "px" )
         .attr("fill", "#e5e5e5" )
