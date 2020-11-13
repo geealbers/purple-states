@@ -1,14 +1,108 @@
-// https://stackoverflow.com/questions/19844545/replacing-css-file-on-the-fly-and-apply-the-new-style-to-the-page
-function changeCSS(cssFile, cssLinkIndex) {
+function buildMap(year) {
 
-    var oldlink = document.getElementsByTagName("link").item(cssLinkIndex);
+  let body = d3.select("#body")
 
-    var newlink = document.createElement("link");
-    newlink.setAttribute("rel", "stylesheet");
-    newlink.setAttribute("type", "text/css");
-    newlink.setAttribute("href", cssFile);
+  Promise.all([
+      d3.json("../js/states-map.json"),
+      d3.json("../js/states-data.json"),
+  ]).then(mapData)
 
-    document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink)
+  function mapData(datasources) {
+    let map = datasources[0]
+    let votes = datasources[1]
+
+    let demIndex = {}
+    for (let v of votes[year]) {
+      let state = v.state;
+      demIndex[state] = +v.democratic_votes;
+    }
+    map.features = map.features.map( d => {
+      let state = d.properties.name;
+      let votes = demIndex[state];
+      d.properties.demVotes = votes;
+      return d;
+    })
+
+    let repIndex = {}
+    for (let v of votes[year]) {
+      let state = v.state;
+      repIndex[state] = +v.republican_votes;
+    }
+    map.features = map.features.map( d => {
+      let state = d.properties.name;
+      let votes =repIndex[state];
+      d.properties.repVotes = votes;
+      return d;
+    })
+
+    // Add electroal vote couts into the data
+    // let electoralIndex = {}
+    // for (let v of votes[year]) {
+    //   let state = v.state;
+    //   electoralIndex[state] = +v.electoral_votes;
+    // }
+    // map.features = map.features.map( d => {
+    //   let state = d.properties.name;
+    //   let votes = electoralIndex[state];
+    //   d.properties.electoralVotes = votes;
+    //   return d;
+    // })
+
+    // console.log(demIndex)
+    // console.log(repIndex)
+    // console.log(electoralVotes)
+    // console.log(map)
+
+    let bodyHeight = 377
+    let bodyWidth = 624
+
+    var projection = d3.geoAlbersUsa()
+        .scale(810)
+        .translate([bodyWidth / 2, bodyHeight / 2])
+
+    var path = d3.geoPath()
+        .projection(projection);
+
+    body.selectAll("*").remove()
+
+    body.selectAll("path")
+        .data(map.features)
+        .enter().append("path")
+        .attr("d", d => path(d))
+        .attr("stroke", "#e5e5e5")
+        .attr("stroke-width", ".3px")
+        .attr("fill", function(d) {
+          let total = d.properties.repVotes + d.properties.demVotes;
+          let red = d.properties.repVotes / total * 255;
+          let blue = d.properties.demVotes / total * 255;
+          let color = "rgb(" + red + ", 60, " + blue + ")";
+          return color;
+        })
+
+    // Intial version of map with circles representing electoral vote size
+    // body.selectAll("path")
+    //     .data(map.features)
+    //     .enter().append("path")
+    //     .attr("d", d => path(d))
+    //     .attr("stroke", "#999")
+    //     .attr("stroke-width", ".5px")
+    //     .attr("fill", "none")
+    // body.selectAll("circle")
+    //     .data(map.features)
+    //     .enter().append("circle")
+    //     .attr("cx", d => path.centroid(d)[0] )
+    //     .attr("cy", d => path.centroid(d)[1] )
+    //     .attr("r", d => d.properties.electoralVotes )
+    //     .style("stroke", "none")
+    //     .attr("fill", function(d) {
+    //       let total = d.properties.repVotes + d.properties.demVotes;
+    //       let red = d.properties.repVotes / total * 255;
+    //       let blue = d.properties.demVotes / total * 255;
+    //       let color = "rgb(" + red + ", 60, " + blue + ")";
+    //       return color;
+    //     })
+
+    }
 
 }
 
