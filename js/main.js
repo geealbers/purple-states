@@ -99,7 +99,7 @@ function drawMap(map,path) {
         .attr("x", d => d.x)
         .attr("y", d => d.y + (fontSize * .3))
         .attr("text-anchor", "middle")
-        .attr("font-size", fontSize + "px" )
+        .attr("font-size", d => sqrtScale(d.properties.population) <  fontSize ? (fontSize * .7) + "px" : fontSize + "px" )
         .attr("font-weight", "bold")
         .attr("fill", "#e5e5e5" )
         .text( d => d.properties.postalCode )
@@ -109,7 +109,7 @@ function drawMap(map,path) {
     //     .attr("x", d => d.x)
     //     .attr("y", d => d.y + fontSize)
     //     .attr("text-anchor", "middle")
-    //     .attr("font-size", fontSize + "px" )
+    //     .attr("font-size", d => sqrtScale(d.properties.population) <  fontSize ? (fontSize * .7) + "px" : fontSize + "px" )
     //     .attr("fill", "#e5e5e5" )
     //     .text( d => d.properties.electoralVotes )
 

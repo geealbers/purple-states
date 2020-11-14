@@ -1,4 +1,4 @@
-﻿{
+{
     "1980": [
         {
             "state": "Alabama",
@@ -1222,7 +1222,7 @@
         },
         {
             "state": "Wyoming",
-            "postal_code": "W",
+            "postal_code": "WY",
             "electoral_votes": "3",
             "republican_votes": "106867",
             "democratic_votes": "67113",
@@ -1632,7 +1632,7 @@
         },
         {
             "state": "Wyoming",
-            "postal_code": "W",
+            "postal_code": "WY",
             "electoral_votes": "3",
             "republican_votes": "79347",
             "democratic_votes": "68160",
