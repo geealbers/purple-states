@@ -22,6 +22,10 @@ The site first launched with a **geographic** map of the U.S. and then I later a
 
 ![2004 electoral map with states shaped in cubic form and colored various shades of purple](img/2004-electoral.jpg)
 
+However, I've removed the electoral map (at least temporarily) in favor of one showing population.
+
+![2004 population map with states represented by shaded cirlces sized proportionally to their populations](img/2004-population.jpg)
+
 I built this in the days following [the 2020 election](https://en.wikipedia.org/wiki/2020_United_States_presidential_election), before the final winner was announced. After four years of national trauma under the 45th president, it was baffling and sickening that the contest was as close as it was. Still, I was compelled to look for solace, answers, hope anywhere. The purple map helped me. Helped me to remember that just because a state is “red” doesn’t mean it’s fully that way. To remember that flipping another one may not be that far off after all. To remember that we need to fight the polarization that electoral maps, traditional and social media, and so many other things seems to push us toward these days.
 
 ## Credits
@@ -32,9 +36,11 @@ Mason, Betsy, “Election Maps Are Everywhere. Don’t Let Them Fool You.” *Ne
 
 Map data was pulled from Wikipedia pages and culled in a Google Sheet: https://docs.google.com/spreadsheets/d/1srbBVuDko3WbCrl9WTTkYJUX5OUKACsDY4t1S95inVk/edit?usp=sharing. I used only the totals of votes for the Democratic and Replublican party candidates. Third party candidates were not factored in.
 
-Vector map of the United States: https://freevectormaps.com/united-states/US-EPS-01-0002.
+GeoJSON map of the United States: https://eric.clst.org/tech/usgeojson/.
 
 Redaction font (Open Font License 1.1): https://www.redaction.us/.
+
+Built with D3.js (BSD License): https://d3js.org/
 
 ## License
 
