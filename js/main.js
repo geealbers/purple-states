@@ -8,7 +8,7 @@ function buildMap(y) {
   }
 
   Promise.all([
-      d3.json("../js/states-map.json"),
+      d3.json("../js/states-map-20m.json"),
       d3.json("../js/states-data.json"),
   ]).then(mapData)
 
@@ -27,7 +27,7 @@ function buildMap(y) {
         v.postal_code ];
     }
     map.features = map.features.map( d => {
-      let state = d.properties.name;
+      let state = d.properties.NAME;
       let votes = index[state];
       d.properties.repVotes = votes[0];
       d.properties.demVotes = votes[1];
@@ -75,15 +75,14 @@ function drawMap(map,path) {
 
     var spreadMap = applySimulation(map.features)
 
-    body.selectAll("*").remove()
     body.selectAll("path")
-        .data(map.features)
-        .enter().append("path")
         .attr("d", d => path(d))
         .attr("stroke", "#b5b5b5")
         .attr("stroke-width", ".5px")
         .attr("fill", "none")
+    body.selectAll("circle").remove()
     body.selectAll("circle")
+        .enter()
         .data(spreadMap)
         .enter().append("circle")
         .attr("cx", d => d.x)
