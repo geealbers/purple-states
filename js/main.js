@@ -140,10 +140,10 @@ function drawMap(map,path) {
         .attr("fill", fillColor )
   }
 
+  labelColors()
 }
 
 function changeColor() {
-
   if ( document.getElementById("population").checked ) {
     d3.select("#body")
       .selectAll("circle")
@@ -153,65 +153,99 @@ function changeColor() {
       .selectAll("path")
       .attr("fill", fillColor )
   }
+  labelColors()
 }
 
 function fillColor(d) {
-
-  const base = 255
-
   var total = d.properties.repVotes + d.properties.demVotes;
   var repPercent = d.properties.repVotes / total;
   var demPercent = d.properties.demVotes / total;
 
   if ( document.getElementById("blue-yellow").checked )  {
+    let color = colorBlueYellow(repPercent,demPercent)
+    return color;
+  } else if ( document.getElementById("grayscale").checked ) {
+    let color = colorGrayscale(repPercent,demPercent)
+    return color;
+  } else {
+    let color = colorPurple(repPercent,demPercent)
+    return color;
+  }
+}
+
+function labelColors() {
+  let dem75 = document.getElementById("dem-75")
+  let dem65 = document.getElementById("dem-65")
+  let split = document.getElementById("split")
+  let rep65 = document.getElementById("rep-65")
+  let rep75 = document.getElementById("rep-75")
+
+  if ( document.getElementById("blue-yellow").checked ) {
+    dem75.style.backgroundColor = colorBlueYellow(.25,.75)
+    dem65.style.backgroundColor = colorBlueYellow(.35,.65)
+    split.style.backgroundColor = colorBlueYellow(.50,.50)
+    rep65.style.backgroundColor = colorBlueYellow(.65,.35)
+    rep75.style.backgroundColor = colorBlueYellow(.75,.25)
+  } else if ( document.getElementById("grayscale").checked ) {
+    dem75.style.backgroundColor = colorGrayscale(.25,.75)
+    dem65.style.backgroundColor = colorGrayscale(.35,.65)
+    split.style.backgroundColor = colorGrayscale(.50,.50)
+    rep65.style.backgroundColor = colorGrayscale(.65,.35)
+    rep75.style.backgroundColor = colorGrayscale(.75,.25)
+  } else {
+    dem75.style.backgroundColor = colorPurple(.25,.75)
+    dem65.style.backgroundColor = colorPurple(.35,.65)
+    split.style.backgroundColor = colorPurple(.50,.50)
+    rep65.style.backgroundColor = colorPurple(.65,.35)
+    rep75.style.backgroundColor = colorPurple(.75,.25)
+  }
+}
+
+function colorPurple(rep,dem) {
+  // Color forumla for default Purple
+  let r = Math.round(rep * 255)
+  let g = 60
+  let b = Math.round(dem * 255)
+
+  let color = "rgb(" + r + ", " + g + ", " + b + ")";
+  return color;
+}
+
+function colorGrayscale(rep,dem) {
+  // Color formula for simple Grayscale
+  let r = Math.round(rep * 255)
+  let g = Math.round(rep * 255)
+  let b = Math.round(rep * 255)
+
+  let color = "rgb(" + r + ", " + g + ", " + b + ")";
+  return color;
+}
+
+function colorBlueYellow(rep,dem) {
   // Color formula for Blue-Yellow combinaation for color blindness
   // could use this same formula to blend other arbitraty colors
+  let demR = 0
+  let demG = 114
+  let demB = 178
 
-    let demR = 68
-    let demG = 68
-    let demB = 156
+  let repR = 240
+  let repG = 228
+  let repB = 66
 
-    let repR = 172
-    let repG = 172
-    let repB = 26
+  let diffR = Math.abs(demR - repR) * dem;
+  let diffG = Math.abs(demG - repG) * dem;
+  let diffB = Math.abs(demB - repB) * dem;
 
-    let diffR = Math.abs(demR - repR) * demPercent;
-    let diffG = Math.abs(demG - repG) * demPercent;
-    let diffB = Math.abs(demB - repB) * demPercent;
+  var r;
+  var g;
+  var b;
 
-    var r;
-    var g;
-    var b;
+  if (repR < demR) { var r = Math.round(repR + diffR); } else { var r = Math.round(repR - diffR); };
+  if (repG < demG) { var g = Math.round(repG + diffG); } else { var g = Math.round(repG - diffG); };
+  if (repB < demB) { var b = Math.round(repB + diffB); } else { var b = Math.round(repB - diffB); };
 
-    if (repR < demR) { var r = Math.round(repR + diffR); } else { var r = Math.round(repR - diffR); };
-    if (repG < demG) { var g = Math.round(repG + diffG); } else { var g = Math.round(repG - diffG); };
-    if (repB < demB) { var b = Math.round(repB + diffB); } else { var b = Math.round(repB - diffB); };
-
-    let color = "rgb(" + r + ", " + g + ", " + b + ")";
-    return color;
-
-  } else if ( document.getElementById("grayscale").checked ) {
-  // Color formula for simple Grayscale
-
-    let r = Math.round(repPercent * base)
-    let g = Math.round(repPercent * base)
-    let b = Math.round(repPercent * base)
-
-    let color = "rgb(" + r + ", " + g + ", " + b + ")";
-    return color;
-
-  } else {
-  // Color forumla for default Purple
-
-    let r = Math.round(repPercent * base)
-    let g = 60
-    let b = Math.round(demPercent * base)
-
-    let color = "rgb(" + r + ", " + g + ", " + b + ")";
-    return color;
-
-  }
-
+  let color = "rgb(" + r + ", " + g + ", " + b + ")";
+  return color;
 }
 
 // Add an id to the link of the year currently displayed in order to add styling
