@@ -36,7 +36,7 @@ Mason, Betsy, “Election Maps Are Everywhere. Don’t Let Them Fool You.” *Ne
 
 Map data was pulled from Wikipedia pages and culled in a Google Sheet: https://docs.google.com/spreadsheets/d/1srbBVuDko3WbCrl9WTTkYJUX5OUKACsDY4t1S95inVk/edit?usp=sharing. I used only the totals of votes for the Democratic and Replublican party candidates. Third party candidates were not factored in.
 
-GeoJSON map of the United States: https://eric.clst.org/tech/usgeojson/.
+GeoJSON map of the United States: https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html.
 
 Redaction font (Open Font License 1.1): https://www.redaction.us/.
 

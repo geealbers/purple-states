@@ -8,7 +8,7 @@ function buildMap(y) {
   }
 
   Promise.all([
-      d3.json("../js/states-map-20m.json"),
+      d3.json("../js/cb_2018_us_state_20m.json"),
       d3.json("../js/states-data.json"),
   ]).then(mapData)
 
