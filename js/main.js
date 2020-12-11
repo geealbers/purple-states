@@ -24,6 +24,7 @@ function buildMap(y) {
         +v.democratic_votes,
         +v.electoral_votes,
         +v.population,
+        +v.relative_voter_power,
         v.postal_code ];
     }
     map.features = map.features.map( d => {
@@ -33,7 +34,8 @@ function buildMap(y) {
       d.properties.demVotes = votes[1];
       d.properties.electoralVotes = votes[2];
       d.properties.population = votes[3];
-      d.properties.postalCode = votes[4];
+      d.properties.voterPower = votes[4];
+      d.properties.postalCode = votes[5];
       return d;
     })
 
@@ -126,6 +128,146 @@ function drawMap(map,path) {
         return simulation.nodes();
       }
 
+  } else if ( document.getElementById("voter-power").checked ) {
+    // Initial version of a map highlighting states with voter power above a score of 1
+
+    var fontSize = 10.5
+
+    // Fill in states with a voter power above a score of 1
+    body.selectAll("*").remove()
+    body.selectAll("path")
+        .data(map.features)
+        .enter().append("path")
+        .attr("d", d => path(d))
+        .attr("stroke", "#b5b5b5")
+        .attr("stroke-width", ".5px")
+        .attr("fill", d => (d.properties.voterPower / d.properties.electoralVotes) > 1 ? fillColor(d) : "none" )
+
+    labels.selectAll("*").remove()
+    labels.selectAll("text.state")
+        .data(map.features)
+        .enter().append("text")
+        .attr("x", d => adjustLabels(d).x )
+        .attr("y", d => adjustLabels(d).y + (fontSize * .5) )
+        .attr("text-anchor", d => adjustLabels(d).textAnchor )
+        .attr("font-weight", "bold")
+        .attr("font-size", fontSize )
+        .attr("fill", adjustLabelsColor )
+        .text( function(d) {
+          var value = d.properties.voterPower / d.properties.electoralVotes
+          var value = Number(value).toFixed(2)
+          return value
+        } )
+
+    var noLineStates = [ "FL", "LA", "MI", "WV" ]
+
+    labels.selectAll("line")
+      .data(map.features)
+      .enter().append("line")
+      .attr("x1", d => path.centroid(d)[0] )
+      .attr("y1", d => path.centroid(d)[1] )
+      .attr("x2", d => adjustLabels(d).x )
+      .attr("y2", d => adjustLabels(d).y )
+      .attr("stroke", d => noLineStates.includes(d.properties.postalCode) ? "none" : fillColor(d) )
+      .attr("stroke-width", ".3px")
+
+
+    function adjustLabelsColor(d) {
+      var lineStates = [ "CT", "DC", "DE", "HI", "MA", "MD", "NH", "NJ", "RI", "VT" ]
+
+      if ( d.properties.voterPower / d.properties.electoralVotes > 1 && lineStates.includes(d.properties.postalCode) ) {
+        return fillColor(d)
+      } else if (d.properties.voterPower / d.properties.electoralVotes <= 1 ) {
+        return fillColor(d)
+      } else {
+        return "#e5e5e5"
+      }
+    }
+
+    function adjustLabels(d) {
+
+      var adjustedStateLabels = [ "CT", "DC", "DE", "FL", "HI", "LA", "MA", "MI", "MD", "NH", "NJ", "RI", "VT", "WV" ]
+
+      if ( d.properties.postalCode == "MD" ||
+           d.properties.postalCode == "CT" ) {
+        return {
+          x: path.centroid(d)[0] + 40,
+          y: path.centroid(d)[1] + 12,
+          textAnchor: "left"
+        }
+      } else if ( d.properties.postalCode == "DC" ) {
+        return {
+          x: path.centroid(d)[0] + 40,
+          y: path.centroid(d)[1] + 25,
+          textAnchor: "left"
+        }
+      } else if ( d.properties.postalCode == "VT" ) {
+        return {
+          x: path.centroid(d)[0] - 5,
+          y: path.centroid(d)[1] - 35,
+          textAnchor: "middle"
+        }
+      } else if ( d.properties.postalCode == "MA" ||
+                  d.properties.postalCode == "HI" ) {
+        return {
+          x: path.centroid(d)[0] + 30,
+          y: path.centroid(d)[1] - 6,
+          textAnchor: "left"
+        }
+      } else if ( d.properties.postalCode == "MI" ) {
+        return {
+          x: path.centroid(d)[0] + 10,
+          y: path.centroid(d)[1] + 18,
+          textAnchor: "middle"
+        }
+      } else if ( d.properties.postalCode == "LA" ) {
+        return {
+          x: path.centroid(d)[0],
+          y: path.centroid(d)[1] + 8,
+          textAnchor: "middle"
+        }
+      } else if ( d.properties.postalCode == "FL" ) {
+        return {
+          x: path.centroid(d)[0] + 15,
+          y: path.centroid(d)[1] + 10,
+          textAnchor: "middle"
+        }
+      } else if ( d.properties.postalCode == "WV" ) {
+        return {
+          x: path.centroid(d)[0] - 3,
+          y: path.centroid(d)[1],
+          textAnchor: "middle"
+        }
+      } else if ( d.properties.postalCode == "NJ" ) {
+        return {
+          x: path.centroid(d)[0] + 18,
+          y: path.centroid(d)[1],
+          textAnchor: "letf"
+        }
+      } else if ( d.properties.postalCode == "NH" ) {
+        return {
+          x: path.centroid(d)[0] + 25,
+          y: path.centroid(d)[1] - 4,
+          textAnchor: "letf"
+        }
+      } else if ( d.properties.postalCode == "DE" ||
+                  d.properties.postalCode == "NH" ||
+                  d.properties.postalCode == "NJ" ||
+                  d.properties.postalCode == "RI" ) {
+        return {
+          x: path.centroid(d)[0] + 35,
+          y: path.centroid(d)[1],
+          textAnchor: "letf"
+        }
+      } else {
+        return {
+          x: path.centroid(d)[0],
+          y: path.centroid(d)[1],
+          textAnchor: "middle"
+        }
+      }
+    }
+
   } else {
     // Default geographic version of map
     labels.selectAll("*").remove()
@@ -146,6 +288,10 @@ function changeColor() {
   if ( document.getElementById("population").checked ) {
     d3.select("#body")
       .selectAll("circle")
+      .attr("fill", fillColor )
+  } else if ( document.getElementById("voter-power").checked ) {
+    d3.select("#body")
+      .selectAll("path:not([fill=none])")
       .attr("fill", fillColor )
   } else {
     d3.select("#body")
