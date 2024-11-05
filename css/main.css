@@ -31,6 +31,8 @@ body {
   font-family: "Redaction", serif;
   color: rgb(127, 60, 127);
   line-height: 1.3;
+  display: flex;
+  flex-direction: column;
 }
 
 ul[role=navigation] {
