@@ -4514,408 +4514,408 @@
             "state": "Alabama",
             "postal_code": "AL",
             "electoral_votes": "9",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1457704",
+            "democratic_votes": "769391",
             "population": "4916901"
         },
         {
             "state": "Alaska",
             "postal_code": "AK",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "141826",
+            "democratic_votes": "103200",
             "population": "733913"
         },
         {
             "state": "Arizona",
             "postal_code": "AZ",
             "electoral_votes": "11",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1492266",
+            "democratic_votes": "1310383",
             "population": "7377239"
         },
         {
             "state": "Arkansas",
             "postal_code": "AR",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "758651",
+            "democratic_votes": "395851",
             "population": "3029124"
         },
         {
             "state": "California",
             "postal_code": "CA",
-            "electoral_votes": "55",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "54",
+            "republican_votes": "4553303",
+            "democratic_votes": "6742456",
             "population": "39763141"
         },
         {
             "state": "Colorado",
             "postal_code": "CO",
-            "electoral_votes": "9",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "10",
+            "republican_votes": "1302146",
+            "democratic_votes": "1646684",
             "population": "5839796"
         },
         {
             "state": "Connecticut",
             "postal_code": "CT",
             "electoral_votes": "7",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "731164",
+            "democratic_votes": "986573",
             "population": "3564308"
         },
         {
             "state": "Delaware",
             "postal_code": "DE",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "214184",
+            "democratic_votes": "289585",
             "population": "982189"
         },
         {
             "state": "District of Columbia",
             "postal_code": "DC",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "20206",
+            "democratic_votes": "280457",
             "population": "717307"
         },
         {
             "state": "Florida",
             "postal_code": "FL",
-            "electoral_votes": "29",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "30",
+            "republican_votes": "6109443",
+            "democratic_votes": "4680748",
             "population": "21775117"
         },
         {
             "state": "Georgia",
             "postal_code": "GA",
             "electoral_votes": "16",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "2661056",
+            "democratic_votes": "2544281",
             "population": "10720730"
         },
         {
             "state": "Hawaii",
             "postal_code": "HI",
             "electoral_votes": "4",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "193169",
+            "democratic_votes": "312384",
             "population": "1422046"
         },
         {
             "state": "Idaho",
             "postal_code": "ID",
             "electoral_votes": "4",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "605041",
+            "democratic_votes": "274838",
             "population": "1811452"
         },
         {
             "state": "Illinois",
             "postal_code": "IL",
-            "electoral_votes": "20",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "19",
+            "republican_votes": "2400315",
+            "democratic_votes": "2864093",
             "population": "12654175"
         },
         {
             "state": "Indiana",
             "postal_code": "IN",
             "electoral_votes": "11",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1711713",
+            "democratic_votes": "1158650",
             "population": "6759820"
         },
         {
             "state": "Iowa",
             "postal_code": "IA",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "926653",
+            "democratic_votes": "706556",
             "population": "3167149"
         },
         {
             "state": "Kansas",
             "postal_code": "KS",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "741930",
+            "democratic_votes": "532463",
             "population": "2920002"
         },
         {
             "state": "Kentucky",
             "postal_code": "KY",
             "electoral_votes": "8",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1336227",
+            "democratic_votes": "700920",
             "population": "4481929"
         },
         {
             "state": "Louisiana",
             "postal_code": "LA",
             "electoral_votes": "8",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1208269",
+            "democratic_votes": "766424",
             "population": "4661618"
         },
         {
             "state": "Maine",
             "postal_code": "ME",
             "electoral_votes": "4",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "374453",
+            "democratic_votes": "430512",
             "population": "1345973"
         },
         {
             "state": "Maryland",
             "postal_code": "MD",
             "electoral_votes": "10",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "966398",
+            "democratic_votes": "1640687",
             "population": "6075916"
         },
         {
             "state": "Massachusetts",
             "postal_code": "MA",
             "electoral_votes": "11",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1234783",
+            "democratic_votes": "2072304",
             "population": "6930822"
         },
         {
             "state": "Michigan",
             "postal_code": "MI",
-            "electoral_votes": "16",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "15",
+            "republican_votes": "2804647",
+            "democratic_votes": "2724029",
             "population": "9998325"
         },
         {
             "state": "Minnesota",
             "postal_code": "MN",
             "electoral_votes": "10",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1518684",
+            "democratic_votes": "1656829",
             "population": "5676932"
         },
         {
             "state": "Mississippi",
             "postal_code": "MS",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "690439",
+            "democratic_votes": "422018",
             "population": "2977132"
         },
         {
             "state": "Missouri",
             "postal_code": "MO",
             "electoral_votes": "10",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1739041",
+            "democratic_votes": "1190820",
             "population": "6153928"
         },
         {
             "state": "Montana",
             "postal_code": "MT",
-            "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "4",
+            "republican_votes": "343576",
+            "democratic_votes": "225519",
             "population": "1077596"
         },
         {
             "state": "Nebraska",
             "postal_code": "NE",
             "electoral_votes": "5",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "557153",
+            "democratic_votes": "361949",
             "population": "1946415"
         },
         {
             "state": "Nevada",
             "postal_code": "NV",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "724498",
+            "democratic_votes": "678399",
             "population": "3122334"
         },
         {
             "state": "New Hampshire",
             "postal_code": "NH",
             "electoral_votes": "4",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "394869",
+            "democratic_votes": "417083",
             "population": "1364515"
         },
         {
             "state": "New Jersey",
             "postal_code": "NJ",
             "electoral_votes": "14",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1909707",
+            "democratic_votes": "2133455",
             "population": "8892222"
         },
         {
             "state": "New Mexico",
             "postal_code": "NM",
             "electoral_votes": "5",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "422184",
+            "democratic_votes": "476088",
             "population": "2101012"
         },
         {
             "state": "New York",
             "postal_code": "NY",
-            "electoral_votes": "29",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "28",
+            "republican_votes": "3443683",
+            "democratic_votes": "4353005",
             "population": "19461945"
         },
         {
             "state": "North Carolina",
             "postal_code": "NC",
-            "electoral_votes": "15",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "16",
+            "republican_votes": "2878108",
+            "democratic_votes": "2688797",
             "population": "10593928"
         },
         {
             "state": "North Dakota",
             "postal_code": "ND",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "245943",
+            "democratic_votes": "111966",
             "population": "772003"
         },
         {
             "state": "Ohio",
             "postal_code": "OH",
-            "electoral_votes": "18",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "17",
+            "republican_votes": "3116579",
+            "democratic_votes": "2476003",
             "population": "11706055"
         },
         {
             "state": "Oklahoma",
             "postal_code": "OK",
             "electoral_votes": "7",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1036213",
+            "democratic_votes": "499599",
             "population": "3979817"
         },
         {
             "state": "Oregon",
             "postal_code": "OR",
-            "electoral_votes": "7",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "8",
+            "republican_votes": "855863",
+            "democratic_votes": "1131896",
             "population": "4260699"
         },
         {
             "state": "Pennsylvania",
             "postal_code": "PA",
-            "electoral_votes": "20",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "19",
+            "republican_votes": "3510848",
+            "democratic_votes": "3364180",
             "population": "12813056"
         },
         {
             "state": "Rhode Island",
             "postal_code": "RI",
             "electoral_votes": "4",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "213021",
+            "democratic_votes": "282110",
             "population": "1060115"
         },
         {
             "state": "South Carolina",
             "postal_code": "SC",
             "electoral_votes": "9",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1481919",
+            "democratic_votes": "1027225",
             "population": "5206864"
         },
         {
             "state": "South Dakota",
             "postal_code": "SD",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "272081",
+            "democratic_votes": "146859",
             "population": "892490"
         },
         {
             "state": "Tennessee",
             "postal_code": "TN",
             "electoral_votes": "11",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1964499",
+            "democratic_votes": "1055039",
             "population": "6882848"
         },
         {
             "state": "Texas",
             "postal_code": "TX",
-            "electoral_votes": "38",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "40",
+            "republican_votes": "6375362",
+            "democratic_votes": "4806436",
             "population": "29423694"
         },
         {
             "state": "Utah",
             "postal_code": "UT",
             "electoral_votes": "6",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "757608",
+            "democratic_votes": "487924",
             "population": "3255077"
         },
         {
             "state": "Vermont",
             "postal_code": "VT",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "119393",
+            "democratic_votes": "235791",
             "population": "623794"
         },
         {
             "state": "Virginia",
             "postal_code": "VA",
             "electoral_votes": "13",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "2011637",
+            "democratic_votes": "2235958",
             "population": "8594907"
         },
         {
             "state": "Washington",
             "postal_code": "WA",
             "electoral_votes": "12",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1358344",
+            "democratic_votes": "2028272",
             "population": "7713821"
         },
         {
             "state": "West Virginia",
             "postal_code": "WV",
-            "electoral_votes": "5",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "electoral_votes": "4",
+            "republican_votes": "527704",
+            "democratic_votes": "210223",
             "population": "1785386"
         },
         {
             "state": "Wisconsin",
             "postal_code": "WI",
             "electoral_votes": "10",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "1697298",
+            "democratic_votes": "1667881",
             "population": "5837483"
         },
         {
             "state": "Wyoming",
             "postal_code": "WY",
             "electoral_votes": "3",
-            "republican_votes": "",
-            "democratic_votes": "",
+            "republican_votes": "192576",
+            "democratic_votes": "69508",
             "population": "580440"
         }
     ]
